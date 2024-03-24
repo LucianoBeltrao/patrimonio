@@ -14,4 +14,9 @@ class Assets extends Model
     {
         return $this->hasMany(Asset_specification::class);
     }
+
+    public function images(): HasMany
+    {
+        return $this->hasMany(Image::class);
+    }
 }

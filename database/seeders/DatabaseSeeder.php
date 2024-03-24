@@ -16,9 +16,12 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
 
-        Assets::factory(count: 4)
+        Assets::factory(count: 10)
         
-        ->hasVariants(4)
+        ->hasVariants(1)
+
+        ->hasImages(1)
+
         ->create();
 
     }
