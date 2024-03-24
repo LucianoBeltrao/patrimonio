@@ -17,7 +17,9 @@ class DepartmentsFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+        
+            'name' => $this->faker->randomElement(['Almoxarifado', 'Escritorio1', 'Escritorio2', 'Galpão']),
+                
         ];
     }
 }

@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Assets;
+use App\Models\Projects;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -21,6 +22,13 @@ class DatabaseSeeder extends Seeder
         ->hasVariants(1)
 
         ->hasImages(1)
+
+        ->create();
+
+
+        Projects::factory(count: 4)
+        
+        ->hasDepartments(2)
 
         ->create();
 
