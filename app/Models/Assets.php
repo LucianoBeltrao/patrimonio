@@ -19,4 +19,6 @@ class Assets extends Model
     {
         return $this->hasMany(Image::class);
     }
+
+    protected $fillable = ['name'];
 }
