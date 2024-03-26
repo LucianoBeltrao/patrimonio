@@ -1,9 +1,13 @@
-<div>
-    Show Assets
+<x-app-layout>
+    <x-slot name="header">
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+            {{ __('Assets') }}
+        </h2>
+    </x-slot>
 
-    <p> {{ $message }} </p>
+    <div class="py-12">
+        
+    </div>
 
-    <input type="text" name="message" id="message" wire:model="message">
-
-
-</div>
+    
+</x-app-layout>

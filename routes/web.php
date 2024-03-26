@@ -12,21 +12,13 @@ use App\Livewire\ShowAssets;
 
 
 
-Route::get('assets', ShowAssets::class);
-
-
-
-
-
 Route::get('/', function () {
     return view('welcome');
 });
 
-
-
-
-
-
+Route::get('/assets', function () {
+    return view('livewire.show-assets');
+});
 
 
 
