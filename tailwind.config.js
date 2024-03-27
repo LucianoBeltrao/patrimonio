@@ -25,7 +25,7 @@ export default {
                     '500': '#ffa500',
                 },
                 'secondary':{
-                    '100': '#e2e6e9',
+                    '100': '#ebf0fa',
                     '200': '#d4d9de',
                     '300': '#c5ccd3',
                     '400': '#b7bfc8',

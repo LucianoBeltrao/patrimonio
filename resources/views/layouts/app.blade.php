@@ -23,9 +23,10 @@
         <div class="min-h-screen bg-gray-100">
             @livewire('navigation-menu')
             <!-- Page Content -->
+            <h1 class="px4">Lista de Ativos</h1>
             <main>
-                <div class="container" >
-                    <h1>Lista de Ativos</h1>
+                
+                <div class="flex justify-center items-center h-screen" >
                     @livewire('assets-table')
                 </div>
             </main>
