@@ -24,7 +24,10 @@
             @livewire('navigation-menu')
             <!-- Page Content -->
             <main>
-                {{ $slot }}
+                <div class="container" >
+                    <h1>Lista de Ativos</h1>
+                    @livewire('assets-table')
+                </div>
             </main>
         </div>
 
