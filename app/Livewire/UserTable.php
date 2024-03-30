@@ -3,7 +3,7 @@
 namespace App\Livewire;
 
 use Livewire\Component;
-use App\Models\User; // Certifique-se de importar o modelo de usuário se ainda não estiver importado
+use App\Models\User;
 
 class UserTable extends Component
 {

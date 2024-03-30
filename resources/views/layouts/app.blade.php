@@ -27,12 +27,14 @@
             <main>
                 
                 <div class="flex justify-center items-center h-screen" >
-                    @livewire('assets-table')
+                    @livewire('departments-table')
                 </div>
             </main>
         </div>
 
         @stack('modals')
+
+        {{ $slot}}
 
         @livewireScripts
     </body>

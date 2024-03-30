@@ -18,7 +18,7 @@ class DepartmentsFactory extends Factory
     {
         return [
         
-            'name' => $this->faker->randomElement(['Almoxarifado', 'Escritorio1', 'Escritorio2', 'Galpão']),
+            'name' => $this->faker->randomElement(['Almoxarifado', 'Almoxarifado2','Escritorio1', 'Escritorio2', 'Galpão1', 'Galpão2', 'Farmácia1', 'Farmacia2']),
                 
         ];
     }

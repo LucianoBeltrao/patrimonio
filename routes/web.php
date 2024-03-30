@@ -5,20 +5,22 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Livewire\ShowAssets;
+use App\Livewire\UserTable;
 
 // Route::get('assets', function () {
 //     return view('livewire/show-assets');
 // });
 
+Route::get('/users', UserTable::class)->name('users');
 
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/assets', function () {
-    return view('livewire.show-assets');
-});
+// Route::get('/assets', function () {
+//     return view('livewire.show-assets');
+// });
 
 
 
