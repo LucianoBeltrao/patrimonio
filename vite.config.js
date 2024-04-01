@@ -4,7 +4,7 @@ import laravel from 'laravel-vite-plugin';
 export default defineConfig({
     server:{
         gmr: {
-            host: "localhost"
+            host: "192.168.1.201"
         }
     },
     plugins: [

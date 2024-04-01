@@ -1,10 +1,10 @@
-<div class="flex justify-center items-center h-screen rounded">
+<div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
     <table  class="w-full border-collapse bg-secondary-100">
         <thead>
             <tr class="bg-primary-500">
-                <th class="p-4 cursor-pointer" x-on:click="sortBy('id')">Nome</th>
-                <th class="p-4 cursor-pointer" x-on:click="sortBy('name')">Descrição</th>
-                <th class="p-4 cursor-pointer" x-on:click="sortBy('email')">Valor</th>
+                <th class="p-4 cursor-pointer" x-on:click="sortBy('id')">Id</th>
+                <th class="p-4 cursor-pointer" x-on:click="sortBy('name')">Nome</th>
+                <th class="p-4 cursor-pointer" x-on:click="sortBy('email')">Email</th>
             </tr>
         </thead>
         <tbody>

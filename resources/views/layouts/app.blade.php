@@ -25,17 +25,13 @@
             <!-- Page Content -->
             <h1 class="px4">Lista de Ativos</h1>
             <main>
-                
-                <div class="flex justify-center items-center h-screen" >
-                    @livewire('departments-table')
-                </div>
+                {{ $slot}} 
             </main>
         </div>
 
         @stack('modals')
 
-        {{ $slot}}
-
+       
         @livewireScripts
     </body>
 </html>

@@ -1,4 +1,4 @@
-<div class="flex justify-center items-center h-screen rounded">
+<div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
     <table  class="w-full border-collapse bg-secondary-100">
         <thead>
             <tr class="bg-primary-500">
