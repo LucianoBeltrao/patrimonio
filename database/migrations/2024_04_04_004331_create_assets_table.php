@@ -13,9 +13,10 @@ return new class extends Migration
     {
         Schema::create('assets', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('category_id')->constrained();
             $table->string('name'); //nome do ativo
-            $table->string('description'); //descrição básica
-            $table->unsignedInteger('price'); //19.99 // 1999
+            $table->text('description'); //descrição básica
+            $table->decimal('price'); //19.99 
             $table->timestamps();
         });
     }

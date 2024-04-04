@@ -6,13 +6,13 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
-class Projects extends Model
+class Category extends Model
 {
     use HasFactory;
 
-    public function departments(): HasMany
+    public function assets(): HasMany
     {
-        return $this->hasMany(Departments::class);
+        return $this->hasMany(Asset::class);
     }
 
 }

@@ -5,13 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
-class Departments extends Model
+class Asset extends Model
 {
     use HasFactory;
 
-    public function projects(): BelongsTo
+    public function categories(): BelongsTo
     {
-        return $this->belongsTo(Projects::class);
+        return $this->belongsTo(Category::class);
     }
 }

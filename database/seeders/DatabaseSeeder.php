@@ -2,8 +2,9 @@
 
 namespace Database\Seeders;
 
-use App\Models\Assets;
-use App\Models\Projects;
+use App\Models\Asset;
+use App\Models\Category;
+use App\Models\Project;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
@@ -15,22 +16,16 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
+        User::factory(10)->create();
 
-        Assets::factory(count: 10)
+        Category::factory(5)->create();
+
+        Asset::factory()
         
-        ->hasVariants(1)
+            ->count(10)
+			
+			->hasCategories(1)
 
-        ->hasImages(1)
-
-        ->create();
-
-
-        Projects::factory(count: 4)
-        
-        ->hasDepartments(2)
-
-        ->create();
-
+			->create();
     }
 }

@@ -17,13 +17,13 @@
         <!-- Styles -->
         @livewireStyles
     </head>
-    <body class="font-sans antialiased">
+    <body class="bg-tertiary-900">
         <x-banner />
 
         <div class="min-h-screen bg-gray-100">
             @livewire('navigation-menu')
             <!-- Page Content -->
-            <h1 class="px4">Lista de Ativos</h1>
+            <h1 class="px4"><x-banner /></h1>
             <main>
                 {{ $slot}} 
             </main>

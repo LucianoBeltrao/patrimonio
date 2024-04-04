@@ -11,13 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('asset_designations', function (Blueprint $table) {
+        Schema::create('projects', function (Blueprint $table) {
             $table->id();
-            $table->unsignedInteger('assets_id');
-            $table->unsignedInteger('departments_id');
-            $table->unsignedInteger('users_id');
-            $table->Integer('quantity');
-            $table->unsignedInteger('total_price');
+            $table->foreignId('department_id')->constrained();
+            $table->string('client');
             $table->timestamps();
         });
     }
@@ -27,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('asset_designations');
+        Schema::dropIfExists('projects');
     }
 };
