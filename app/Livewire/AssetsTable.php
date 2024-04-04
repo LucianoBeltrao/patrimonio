@@ -3,7 +3,7 @@
 namespace App\Livewire;
 
 use Livewire\Component;
-use App\Models\Assets;
+use App\Models\Asset;
 
 class AssetsTable extends Component
 {
@@ -11,7 +11,7 @@ class AssetsTable extends Component
 
     public function mount()
     {
-        $this->assets = Assets::all(); // Buscar todos os ativos do banco de dados
+        $this->assets = Asset::with('categories')->get();  // Buscar todos os ativos do banco de dados
     }
 
     public function render()
