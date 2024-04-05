@@ -11,14 +11,13 @@ class AssetsTable extends Component
 
     public function mount()
     {
-        $this->assets = Asset::with('categories')->get();  // Buscar todos os ativos do banco de dados
+        $this->assets = Asset::with('categories')->get();// Buscar todos os ativos do banco de dados
     }
+
 
     public function render()
     {
         return view('livewire.assets-table');
     }
 }
-
-
 

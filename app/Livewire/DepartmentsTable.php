@@ -11,7 +11,7 @@ class DepartmentsTable extends Component
 
     public function mount()
     {
-        $this->departments = Department::with('projects')->get(); // With para carregados os dados dos setores relacionados
+        $this->departments = Department::all();
     }
 
     public function render()

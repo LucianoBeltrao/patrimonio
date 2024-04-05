@@ -17,7 +17,7 @@ class ProjectFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'client' => $this->faker->unique()->randomElement(['Prefeitura do Rio de Janeiro', 'Rede Dor', 'Hp. Getulio Vargas', 'Rede Samaritano']),
         ];
     }
 }

@@ -18,7 +18,7 @@ class DatabaseSeeder extends Seeder
     {
         User::factory(10)->create();
 
-        Category::factory(5)->create();
+        Category::factory(4)->create();
 
         Asset::factory()
         
@@ -27,5 +27,11 @@ class DatabaseSeeder extends Seeder
 			->hasCategories(1)
 
 			->create();
+
+        Project::factory(count: 4)
+        
+        ->hasDepartments(3)
+
+        ->create();
     }
 }

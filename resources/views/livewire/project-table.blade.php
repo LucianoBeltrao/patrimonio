@@ -2,13 +2,14 @@
     <table  class="w-full border-collapse bg-secondary-100">
         <thead>
             <tr class="bg-primary-500">
-                <th class="p-4 cursor-pointer" x-on:click="sortBy('name')">Departamento</th>
+                <th class="p-4 cursor-pointer" x-on:click="sortBy('name')">Projeto</th>
+                <th class="p-4 cursor-pointer" x-on:click="sortBy('departmants')">Departamentos</th>
             </tr>
         </thead>
         <tbody>
-            @foreach($departments as $department)
+            @foreach($projects as $project)
             <tr class="border-b border-primary-500">
-                <td class="px-4 py-4">{{ $department->name}}</td>
+                <td class="px-4 py-4">{{ $project->client}}</td>
             </tr>
             @endforeach
         </tbody>

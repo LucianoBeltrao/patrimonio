@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Livewire\AssetsTable;
 use App\Livewire\DepartmentsTable;
+use App\Livewire\ProjectTable;
 use App\Livewire\UserTable;
 
 // Route::get('assets', function () {
@@ -16,6 +17,9 @@ Route::get('/assets', AssetsTable::class)->name('assets');
 
 
 Route::get('/departments', DepartmentsTable::class)->name('departments');
+
+
+Route::get('/projects', ProjectTable::class)->name('projects');
 
 
 Route::get('/', function () {

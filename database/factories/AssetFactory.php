@@ -2,7 +2,6 @@
 
 namespace Database\Factories;
 
-use App\Models\Asset;
 use App\Models\Category;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -18,12 +17,10 @@ class AssetFactory extends Factory
      */
     public function definition(): array
     {
-
         return [
-
-            'category_id' => Category::inRandomOrder()->first()->id,
-
-            'name' => $this->faker->unique()->randomElement(['Geladeira',
+                'category_id' => Category::inRandomOrder()->first()->id,
+				
+				'name' => $this->faker->unique()->randomElement(['Geladeira',
 				'Lixeira',
 				'Pallet',
 				'Placas',
@@ -97,9 +94,9 @@ class AssetFactory extends Factory
 				'Paletes',
 				'Longarinas']),
 
-				'description' => $this->faker->sentence('3'),
+				'description' => $this->faker->paragraph(nbSentences:2),
 
-				'price' => $this->faker->numberBetween( 100, 1000),
+				'price' => $this->faker->numberBetween(int1: 50_00, int2: 900_00),
         ];
     }
 }
