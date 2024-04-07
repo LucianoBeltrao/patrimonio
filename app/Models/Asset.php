@@ -10,7 +10,7 @@ class Asset extends Model
 {
     use HasFactory;
 
-    public function categories(): BelongsTo
+    public function category(): BelongsTo
     {
         return $this->belongsTo(Category::class);
     }

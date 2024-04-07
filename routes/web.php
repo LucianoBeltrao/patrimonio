@@ -2,7 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Livewire\AssetsTable;
+use App\Livewire\CreateAsset;
 use App\Livewire\DepartmentsTable;
+use App\Livewire\Forms\AssetForm;
 use App\Livewire\ProjectTable;
 use App\Livewire\UserTable;
 
@@ -20,6 +22,9 @@ Route::get('/departments', DepartmentsTable::class)->name('departments');
 
 
 Route::get('/projects', ProjectTable::class)->name('projects');
+
+
+Route::get('/assetsform', CreateAsset::class)->name('assetsform');
 
 
 Route::get('/', function () {
