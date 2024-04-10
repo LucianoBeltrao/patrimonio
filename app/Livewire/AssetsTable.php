@@ -2,8 +2,10 @@
 
 namespace App\Livewire;
 
+use App\Livewire\Forms\AssetForm;
 use Livewire\Component;
 use App\Models\Asset;
+use App\Models\Category;
 
 class AssetsTable extends Component
 {
@@ -11,7 +13,7 @@ class AssetsTable extends Component
 
     public function mount()
     {
-        $this->assets = Asset::with('categories')->get();// Buscar todos os ativos do banco de dados
+        $this->assets = Asset::with('category')->get();// Buscar todos os ativos do banco de dados
     }
 
 
@@ -20,4 +22,40 @@ class AssetsTable extends Component
         return view('livewire.assets-table');
     }
 }
+
+
+class CreateAsset extends Component
+{
+    public $categories;
+
+    public function mount()
+    {
+        $this->categories = Category::all();
+    }
+
+
+
+
+
+    public AssetForm $form;
+
+    public function save()
+    {
+        $this->validate();
+ 
+        Asset::create(
+            $this->form->all() 
+        );
+
+        
+        return $this->redirect('/assets');
+    }
+
+    public function render()
+    {
+        return view('livewire.asset-form');
+    }
+
+}
+
 

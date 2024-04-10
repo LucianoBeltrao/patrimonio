@@ -12,7 +12,7 @@ class ProjectTable extends Component
 
     public function mount()
     {
-        $this->projects = Project::all();
+        $this->projects = Project::with('departments')->get();;
     }
 
 

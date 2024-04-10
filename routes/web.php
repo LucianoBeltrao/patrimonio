@@ -2,33 +2,38 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Livewire\AssetsTable;
+use App\Livewire\CreateAsset;
 use App\Livewire\DepartmentsTable;
 use App\Livewire\ProjectTable;
 use App\Livewire\UserTable;
 
-// Route::get('assets', function () {
-//     return view('livewire/show-assets');
-// });
+
+
+
 
 Route::get('/users', UserTable::class)->name('users');
 
 
 Route::get('/assets', AssetsTable::class)->name('assets');
+Route::get('/assetform', CreateAsset::class)->name('assetform');
 
 
 Route::get('/departments', DepartmentsTable::class)->name('departments');
+//Route::get('/assetform', CreateAsset::class)->name('assetform');
 
 
 Route::get('/projects', ProjectTable::class)->name('projects');
+//Route::get('/assetform', CreateAsset::class)->name('assetform');
+
+
+
+
+
 
 
 Route::get('/', function () {
     return view('welcome');
 });
-
-// Route::get('/assets', function () {
-//     return view('livewire.show-assets');
-// });
 
 
 

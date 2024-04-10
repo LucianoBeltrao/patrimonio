@@ -10,6 +10,10 @@
             @foreach($projects as $project)
             <tr class="border-b border-primary-500">
                 <td class="px-4 py-4">{{ $project->client}}</td>
+                @foreach($project->departments as $department)
+                <tr class="border-b border-primary-500">
+                    <td class="px-4 py-4">{{ $department->name}}</td>
+                @endforeach
             </tr>
             @endforeach
         </tbody>

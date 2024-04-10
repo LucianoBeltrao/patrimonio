@@ -10,11 +10,17 @@ class Asset extends Model
 {
     use HasFactory;
 
-    public function categories(): BelongsTo
+    public function category(): BelongsTo
     {
         return $this->belongsTo(Category::class);
     }
     
+    
+    protected $fillable = [
+        'category_id', 'name', 'description', 'price'// Adicionando category_id aos campos fillable
+        // Outros campos fillable aqui
+    ];
+
 }
 
 
