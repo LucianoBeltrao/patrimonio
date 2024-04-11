@@ -10,7 +10,7 @@ class Department extends Model
 {
     use HasFactory;
 
-    public function projects(): BelongsTo
+    public function project(): BelongsTo
     {
         return $this->belongsTo(Project::class);
     }

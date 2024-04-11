@@ -8,14 +8,17 @@ use Livewire\Form;
 
 class AssetForm extends Form
 {
-
+    #[Validate('min:1')]
+    public $category_id = '';
+ 
     #[Validate('required|min:5')]
     public $name = '';
- 
+
     #[Validate('min:5')]
     public $description = '';
-
+    
     #[Validate('required|min:5')]
-    public $value = '';
+    public $price = '';
+
 
 }

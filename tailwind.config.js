@@ -29,7 +29,7 @@ export default {
                     '200': '#d4d9de',
                     '300': '#c5ccd3',
                     '400': '#b7bfc8',
-                    '500': '#a9b3bc',
+                    '500': '#979da1',
 
                 },
                 'tertiary':{

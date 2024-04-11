@@ -8,20 +8,28 @@ use App\Livewire\Forms\AssetForm;
 use App\Livewire\ProjectTable;
 use App\Livewire\UserTable;
 
-// Route::get('assets', function () {
-//     return view('livewire/show-assets');
-// });
+
+
+
 
 Route::get('/users', UserTable::class)->name('users');
 
 
 Route::get('/assets', AssetsTable::class)->name('assets');
+Route::get('/assetform', CreateAsset::class)->name('assetform');
 
 
 Route::get('/departments', DepartmentsTable::class)->name('departments');
+//Route::get('/assetform', CreateAsset::class)->name('assetform');
 
 
 Route::get('/projects', ProjectTable::class)->name('projects');
+//Route::get('/assetform', CreateAsset::class)->name('assetform');
+
+
+
+
+
 
 
 Route::get('/assetsform', CreateAsset::class)->name('assetsform');
@@ -30,10 +38,6 @@ Route::get('/assetsform', CreateAsset::class)->name('assetsform');
 Route::get('/', function () {
     return view('welcome');
 });
-
-// Route::get('/assets', function () {
-//     return view('livewire.show-assets');
-// });
 
 
 
