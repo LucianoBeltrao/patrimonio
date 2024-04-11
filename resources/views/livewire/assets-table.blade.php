@@ -2,17 +2,18 @@
     
     <div class="flex items-right justify-end py-2">
             
-        <button type="submit" class="text-white bg-secondary-500 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Novo Ativo</button>
+        <a href="{{ route('assetform') }}" class="text-white bg-gradient-to-r from-secondary-300 via-secondary-400 to-secondary-400  hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-primary-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"> Inserir Ativo </a>
     
     </div>
 
-    <table class="w-full border-collapse bg-secondary-100">
+    <table class="w-full border-collapse">
         <thead>
             <tr class="bg-primary-500">
                 <th class="p-4 cursor-pointer" x-on:click="sortBy('name')">Nome</th>
                 <th class="p-4 cursor-pointer" x-on:click="sortBy('description')">Descrição</th>
                 <th class="p-4 cursor-pointer" x-on:click="sortBy('description')">Categoria</th>
                 <th class="p-4 cursor-pointer" x-on:click="sortBy('price')">Valor</th>
+                <th class="p-4 cursor-pointer" x-on:click="sortBy('price')">Alterar</th>
             </tr>
         </thead>
         <tbody>
@@ -22,6 +23,8 @@
                     <td class="px-4 py-4">{{ $asset->description }}</td>
                     <td class="px-4 py-4">{{ $asset->category->name }}</td>
                     <td class="px-4 py-4">{{ $asset->price }}</td>
+                    <td class="px-4 py-4"> <a href="{{ route('assetform') }}" class="text-white bg-gradient-to-r from-secondary-300 via-secondary-400 to-secondary-400  hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-primary-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2" 
+                        wire:click="$dispatch('adit-asset', {id: {{ $asset->id }}})"> Editar</a>
                 </tr>
             @endforeach
         </tbody>

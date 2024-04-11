@@ -9,7 +9,7 @@ use Livewire\Form;
 class AssetForm extends Form
 {
     #[Validate('min:1')]
-    public $category_id = 1;
+    public $category_id = '';
  
     #[Validate('required|min:5')]
     public $name = '';
