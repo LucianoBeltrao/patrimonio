@@ -39,10 +39,7 @@ class CreateAsset extends Component
         $this->categories = Category::all();
     }
 
-    /* public function updatedSelectedCategory($category)
-    {
-        $this->assets = Asset::where('category_id', $category)->get();
-    } */
+
 
 
     public AssetForm $form;

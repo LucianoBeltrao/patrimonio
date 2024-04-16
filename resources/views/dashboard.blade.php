@@ -8,7 +8,29 @@
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-                <x-welcome />
+                
+
+<div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+    <div>
+        <img class="h-auto max-w-full rounded-lg" src="{{ asset('images/cellphone.jpg') }}" alt="Descrição da imagem">
+    </div>
+    <div>
+        <img class="h-auto max-w-full rounded-lg" src="{{ asset('images/silverchair.jpg') }}" alt="Descrição da imagem">
+    </div>
+    <div>
+        <img class="h-auto max-w-full rounded-lg" src="{{ asset('images/schedule.jpg') }}" alt="Descrição da imagem">
+    </div>
+    <div>
+        <img class="h-auto max-w-full rounded-lg" src="{{ asset('images/goldbar.jpg') }}" alt="Descrição da imagem">
+    </div>
+    <div>
+        <img class="h-auto max-w-full rounded-lg" src="{{ asset('images/car.jpg') }}" alt="Descrição da imagem">
+    </div>
+    <div>
+        <img class="h-auto max-w-full rounded-lg" src="{{ asset('images/computer.jpg') }}" alt="Descrição da imagem">
+    </div>
+</div>
+
             </div>
         </div>
     </div>
