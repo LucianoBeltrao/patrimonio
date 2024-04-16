@@ -11,24 +11,38 @@
                 
 
 <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-    <div>
-        <img class="h-auto max-w-full rounded-lg" src="{{ asset('images/cellphone.jpg') }}" alt="Descrição da imagem">
-    </div>
+    <a href="{{ route('assets') }}">
+        <div>
+            <img class="h-auto max-w-full rounded-lg" src="{{ asset('images/cellphone.jpg') }}" alt="Descrição da imagem">
+        </div>
+    </a>
+
+    <a href="{{ route('projects') }}">
     <div>
         <img class="h-auto max-w-full rounded-lg" src="{{ asset('images/silverchair.jpg') }}" alt="Descrição da imagem">
     </div>
+    </a>
+    <a href="{{ route('users') }}">
     <div>
         <img class="h-auto max-w-full rounded-lg" src="{{ asset('images/schedule.jpg') }}" alt="Descrição da imagem">
     </div>
+    </a>
+    <a href="{{ route('assetform') }}">
     <div>
         <img class="h-auto max-w-full rounded-lg" src="{{ asset('images/goldbar.jpg') }}" alt="Descrição da imagem">
     </div>
+    </a>
+    <a href="{{ route('assets') }}">
     <div>
         <img class="h-auto max-w-full rounded-lg" src="{{ asset('images/car.jpg') }}" alt="Descrição da imagem">
     </div>
+    </a>
+    <a href="{{ route('assetform') }}">
     <div>
         <img class="h-auto max-w-full rounded-lg" src="{{ asset('images/computer.jpg') }}" alt="Descrição da imagem">
     </div>
+    </a>
+
 </div>
 
             </div>
