@@ -29,9 +29,8 @@
                             <td class="px-4 py-4 ">{{ $asset->description }}</td>
                             <td class="px-4 py-4 ">{{ $asset->category->name }}</td>
                             <td class="px-4 py-4 ">{{ $asset->price }}</td>
-                            <td class="px-4 py-4 "> <a href="{{ route('assetform') }}"
-                                    class="text-white bg-gradient-to-r from-secondary-300 via-secondary-400 to-secondary-400  hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-primary-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"
-                                    wire:click="$dispatch('adit-asset', {id: {{ $asset->id }}})"> Editar</a>
+                            <td class="px-4 py-4 "> <a href="{{ route('editasset', ['id'=>$asset->id]) }}"
+                                    class="text-white bg-gradient-to-r from-secondary-300 via-secondary-400 to-secondary-400  hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-primary-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"> Editar</a>
                         </tr>
                     @endforeach
                 </tbody>

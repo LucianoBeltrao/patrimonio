@@ -9,22 +9,48 @@
                     Todos os Ativos </a>
 
             </div>
+
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+
 
                 <div class="grid gap-6 mb-6 md:grid-cols-2 py-5">
 
-                    <form wire:submit="save">
+
+
+                    <form wire:submit="updateAsset">
 
                         <div class="py-5">
-                            <label for="countries" class="block mb-1 text-sm font-medium text-gray-900 dark:text-white"
-                                wire:model="category_id">Categoria</label>
-                            <select wire:model.live="form.category_id"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                <option selected>Defina uma categoria</option>
-                                @foreach ($categories as $category)
-                                    <option value="{{ $category->id }}">{{ $category->name }}</option>
-                                @endforeach
-                            </select>
+                            <div>
+                                <label for="asset_id"
+                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Id</label>
+                                <input type="text" id="asset_id"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                    wire:model="form.asset_id" />
+                            </div>
+                            <div>
+                                @error('form.asset_id')
+                                    <span class="error">{{ $message }}</span>
+                                @enderror
+                            </div>
+                        </div>
+
+
+
+                        <div class="py-5">
+                            <div>
+                                <label for="name"
+                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Categoria</label>
+                                <input type="text" id="category"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                    wire:model.live="form.category_id" />
+                            </div>
+                            {{-- <label for="countries" class="block mb-1 text-sm font-medium text-gray-900 dark:text-white" wire:model="category_id">Categoria</label>
+                        <select wire:model.live="form.category_id" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                            <option selected>Defina uma categoria</option>
+                            @foreach ($categories as $category)
+                                <option value="{{ $category->id }}">{{ $category->name }}</option>
+                            @endforeach
+                        </select>             --}}
                             <div>
                                 @error('form.category_id')
                                     <span class="error">{{ $message }}</span>
@@ -95,7 +121,10 @@
                     </form>
 
                 </div>
+
             </div>
         </div>
 
     </div>
+
+</div>
