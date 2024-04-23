@@ -8,6 +8,9 @@ use Livewire\Form;
 
 class AssetForm extends Form
 {
+
+    public ?Asset $asset;
+
     #[Validate('min:1')]
     public $category_id = '';
  
@@ -20,5 +23,25 @@ class AssetForm extends Form
     #[Validate('required|min:5')]
     public $price = '';
 
+    public function setAsset(Asset $asset)
+    {
+        $this->asset = $asset;
 
+        $this->category_id = $asset->category_id;
+
+        $this->name = $asset->name;
+
+        $this->description = $asset->description;
+
+        $this->price = $asset->price;
+    }
+
+    public function update()
+
+    {
+        $this->asset->update(
+            $this->all()
+        );
+
+    }
 }
