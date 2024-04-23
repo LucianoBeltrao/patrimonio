@@ -18,7 +18,7 @@ Route::get('/users', UserTable::class)->name('users');
 
 Route::get('/assets', AssetsTable::class)->name('assets');
 Route::get('/assetform', CreateAsset::class)->name('assetform');
-Route::get('/editasset/{id}', EditAsset::class)->name('editasset');
+Route::get('/editasset/{asset}', EditAsset::class)->name('editasset');
 
 
 Route::get('/departments', DepartmentsTable::class)->name('departments');

@@ -2,6 +2,7 @@
 
 namespace App\Livewire;
 
+use App\Livewire\Forms\AssetForm;
 use App\Models\Asset;
 use App\Models\Category;
 use Livewire\Component;
@@ -11,18 +12,24 @@ use Livewire\Component;
 
 class EditAsset extends Component
 {
-    public $asset_id, $categories, $name, $description, $price, $asset;
+    public AssetForm $form;
 
-    
-    public function mount($id)
+    public function mount(Asset $asset)
     {
 
-        $asset = Asset::where('id', $id)->first();
+        $this->form->setAsset($asset);
 
-        $this->asset_id = $asset->id;
-        // $this->categories = Category::all();
 
     }
+
+    
+    public function update()
+    {
+        $this->form->update();
+ 
+        return $this->redirect('/assets');
+    }
+
 
     public function render()
     {
