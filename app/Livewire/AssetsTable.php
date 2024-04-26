@@ -12,6 +12,8 @@ class AssetsTable extends Component
 {
     public $assets;
 
+
+
     public function mount()
     {
         $this->assets = Asset::with('category')->get();// Buscar todos os ativos do banco de dados
@@ -22,6 +24,16 @@ class AssetsTable extends Component
     {
         return view('livewire.assets-table');
     }
+
+    public function delete(Asset $asset)
+    {
+            $asset->delete();
+          
+            session()->flash('message', 'Ativo excluído com sucesso.');
+            return $this->redirect('/assets', navigate:true);
+     }
+
+
 }
 
 
@@ -63,5 +75,6 @@ class CreateAsset extends Component
     }
 
 }
+
 
 

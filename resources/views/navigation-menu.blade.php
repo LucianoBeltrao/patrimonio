@@ -6,7 +6,9 @@
                 <!-- Logo -->
                 <div class="shrink-8 flex items-center">
                     <a href="{{ route('dashboard') }}">
-                        <x-application-mark class="block h-9 w-auto" />
+                        <div>
+                            <img class="h-auto max-w-full rounded-lg" src="{{ asset('images/logo.jpg') }}" alt="Descrição da imagem">
+                        </div>
                     </a>
                 </div>
 
@@ -239,6 +241,7 @@
           <h1 class="text-3xl font-bold tracking-tight text-gray-900">Dashboard</h1>
         </div>
     </header>
+    
 </nav>
 
   

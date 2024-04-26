@@ -3,6 +3,7 @@
 namespace App\Livewire\Forms;
 
 use App\Models\Asset;
+use App\Models\Category;
 use Livewire\Attributes\Validate;
 use Livewire\Form;
 
