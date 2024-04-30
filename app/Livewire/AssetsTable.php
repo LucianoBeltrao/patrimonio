@@ -6,14 +6,18 @@ use App\Livewire\Forms\AssetForm;
 use Livewire\Component;
 use App\Models\Asset;
 use App\Models\Category;
-
+use Livewire\WithPagination;
 
 class AssetsTable extends Component
 {
-    public $assets;
 
+    use WithPagination;
 
+    public $assets=[];
 
+    public $search='';
+
+    
     public function mount()
     {
         $this->assets = Asset::with('category')->get();// Buscar todos os ativos do banco de dados
@@ -22,6 +26,11 @@ class AssetsTable extends Component
 
     public function render()
     {
+        if($this->search){
+            $this->assets=Asset::all();
+        }else{
+            $this->assets=Asset::where('name','like','%'.$this->search.'%')->get();
+        }
         return view('livewire.assets-table');
     }
 
