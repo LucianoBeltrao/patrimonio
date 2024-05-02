@@ -11,7 +11,7 @@ use Livewire\WithPagination;
 class AssetsTable extends Component
 {
 
-    use WithPagination;
+
 
     public $assets=[];
 
@@ -26,7 +26,7 @@ class AssetsTable extends Component
 
     public function render()
     {
-        if($this->search){
+        if(! $this->search){
             $this->assets=Asset::all();
         }else{
             $this->assets=Asset::where('name','like','%'.$this->search.'%')->get();
