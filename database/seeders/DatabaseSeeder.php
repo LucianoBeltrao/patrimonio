@@ -24,7 +24,7 @@ class DatabaseSeeder extends Seeder
         
             ->count(10)
 			
-			->hasCategories(1)
+			->hasCategory(1)
 
 			->create();
 

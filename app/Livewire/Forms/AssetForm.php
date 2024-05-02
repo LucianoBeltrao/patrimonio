@@ -13,6 +13,9 @@ class AssetForm extends Form
     public ?Asset $asset;
 
     #[Validate('min:1')]
+    public $record = '';
+
+    #[Validate('min:1')]
     public $category_id = '';
  
     #[Validate('required|min:5')]
@@ -27,6 +30,8 @@ class AssetForm extends Form
     public function setAsset(Asset $asset)
     {
         $this->asset = $asset;
+
+        $this->record = $asset->record;
 
         $this->category_id = $asset->category_id;
 

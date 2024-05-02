@@ -19,6 +19,8 @@ class AssetFactory extends Factory
     {
         return [
                 'category_id' => Category::inRandomOrder()->first()->id,
+
+				'record' => $this->faker->numberBetween(int1: 1_00, int2: 100_00),
 				
 				'name' => $this->faker->unique()->randomElement(['Geladeira',
 				'Lixeira',
