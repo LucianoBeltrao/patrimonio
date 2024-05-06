@@ -9,13 +9,23 @@ class UserTable extends Component
 {
     public $users;
 
+    public $search='';
+
     public function mount()
     {
         $this->users = User::all(); // Buscar todos os usuários do banco de dados
     }
 
     public function render()
-    {
-        return view('livewire.user-table');
+    {   
+        if (! $this->search){
+            $this->mount();
+        }else{
+            $this->users=User::where('name', 'like', '%'.$this->search.'%')->all();
+        }
+        return view('livewire.user-table', [
+            'users'=>$this->users,
+        ]);
+
     }
 }
