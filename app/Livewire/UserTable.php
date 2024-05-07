@@ -21,11 +21,9 @@ class UserTable extends Component
         if (! $this->search){
             $this->mount();
         }else{
-            $this->users=User::where('name', 'like', '%'.$this->search.'%')->all();
+            $this->users=User::where('name', 'like', '%'.$this->search.'%')->get();
         }
-        return view('livewire.user-table', [
-            'users'=>$this->users,
-        ]);
+        return view('livewire.user-table');
 
     }
 }
