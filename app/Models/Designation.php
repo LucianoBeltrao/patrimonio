@@ -11,7 +11,7 @@ class Designation extends Model
 {
     use HasFactory;
 
-    public function asset(): HasMany
+    public function assets(): HasMany
     {
         return $this->hasMany(Asset::class);
     }
