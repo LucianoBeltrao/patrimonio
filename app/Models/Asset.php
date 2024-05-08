@@ -21,6 +21,12 @@ class Asset extends Model
         // Outros campos fillable aqui
     ];
 
+
+    public function designation(): BelongsTo
+    {
+        return $this->belongsTo(Designation::class);
+    }
+
 }
 
 

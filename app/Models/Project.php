@@ -14,5 +14,10 @@ class Project extends Model
     {
         return $this->hasMany(Department::class);
     }
+
+    public function designation(): HasMany
+    {
+        return $this->hasMany(Designation::class);
+    }
     
 }

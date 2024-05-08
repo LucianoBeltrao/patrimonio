@@ -11,10 +11,10 @@ class DesignationTable extends Component
 
     public function mount()
     {
-        $this->designations = Designation::with('departments')->get();;
+        $this->designations = Designation::with('asset')->get();
     }
 
-
+    
     public function render()
     {
         return view('livewire.designation-table');

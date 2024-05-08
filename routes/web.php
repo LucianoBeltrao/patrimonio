@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Livewire\AssetsTable;
 use App\Livewire\CreateAsset;
 use App\Livewire\DepartmentsTable;
+use App\Livewire\DesignationTable;
 use App\Livewire\EditAsset;
 use App\Livewire\Forms\AssetForm;
 use App\Livewire\ProjectTable;
@@ -28,6 +29,9 @@ Route::get('/departments', DepartmentsTable::class)->name('departments');
 Route::get('/projects', ProjectTable::class)->name('projects');
 //Route::get('/pejectform', CreateAsset::class)->name('assetform');
 
+
+Route::get('/designations', DesignationTable::class)->name('designations');
+//Route::get('/designations', DesignationTable::class)->name('designations');
 
 
 
