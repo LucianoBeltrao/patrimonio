@@ -22,9 +22,9 @@ class Asset extends Model
     ];
 
 
-    public function designation(): BelongsTo
+    public function designation()
     {
-        return $this->belongsTo(Designation::class);
+        return $this->hasOne(Designation::class);
     }
 
 }

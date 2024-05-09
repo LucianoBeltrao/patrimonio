@@ -15,9 +15,9 @@ class Project extends Model
         return $this->hasMany(Department::class);
     }
 
-    public function designation(): HasMany
+    public function designation()
     {
-        return $this->hasMany(Designation::class);
+        return $this->hasOne(Designation::class);
     }
     
 }

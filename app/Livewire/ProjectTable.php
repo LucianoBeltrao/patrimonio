@@ -15,6 +15,7 @@ class ProjectTable extends Component
         $this->projects = Project::with('departments')->get();;
     }
 
+    
 
     public function render()
     {

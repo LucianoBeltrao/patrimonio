@@ -17,18 +17,19 @@
                     <thead>
                         <tr class="bg-primary-500">
                             <th class="p-4 cursor-pointer text-center" x-on:click="sortBy('name')">Projeto</th>
+                            <th class="p-4 cursor-pointer text-center" x-on:click="sortBy('name')">Departamento</th>
+                            <th class="p-4 cursor-pointer text-center" x-on:click="sortBy('name')">Ativo</th>
+                            <th class="p-4 cursor-pointer text-center" x-on:click="sortBy('name')">Quantidade</th>
                         </tr>
                     </thead>
                     <tbody>
                         @foreach ($designations as $designation)
                             <tr class="border-b border-primary-500">
-                                <td class="px-4 py-4 ">{{ $designation->record }}</td>
-                                <td class="px-4 py-4 ">{{ $designation->name }}</td>
-                                <td class="px-4 py-4 ">{{ $designation->description }}</td>
-                                <td class="px-4 py-4 ">{{ $designation->category->name }}</td>
-                                <td class="px-4 py-4 ">{{ $designation->category->name }}</td>
-                                <td class="px-4 py-4 ">{{ $designation->category->name }}</td>
-        
+                                <td class="px-4 py-4 text-center">{{ $designation->project->client}}</td>
+                                <td class="px-4 py-4 text-center">{{ $designation->department->name}}</td>
+                                <td class="px-4 py-4 text-center">{{ $designation->asset->name}}</td>
+                                <td class="px-4 py-4 text-center">{{ $designation->quantity}}</td>
+
                             </tr>
                         @endforeach
                     </tbody>

@@ -14,4 +14,9 @@ class Department extends Model
     {
         return $this->belongsTo(Project::class);
     }
+
+    public function designation()
+    {
+        return $this->hasOne(Designation::class);
+    }
 }
