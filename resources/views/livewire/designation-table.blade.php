@@ -18,8 +18,10 @@
                         <tr class="bg-primary-500">
                             <th class="p-4 cursor-pointer text-center" x-on:click="sortBy('name')">Projeto</th>
                             <th class="p-4 cursor-pointer text-center" x-on:click="sortBy('name')">Departamento</th>
+                            <th class="p-4 cursor-pointer text-center" x-on:click="sortBy('name')">Registro</th>
                             <th class="p-4 cursor-pointer text-center" x-on:click="sortBy('name')">Ativo</th>
                             <th class="p-4 cursor-pointer text-center" x-on:click="sortBy('name')">Quantidade</th>
+                            <th class="p-4 cursor-pointer text-center" x-on:click="sortBy('name')">Responsável</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -27,8 +29,10 @@
                             <tr class="border-b border-primary-500">
                                 <td class="px-4 py-4 text-center">{{ $designation->project->client}}</td>
                                 <td class="px-4 py-4 text-center">{{ $designation->department->name}}</td>
+                                <td class="px-4 py-4 text-center">{{ $designation->asset->record}}</td>
                                 <td class="px-4 py-4 text-center">{{ $designation->asset->name}}</td>
                                 <td class="px-4 py-4 text-center">{{ $designation->quantity}}</td>
+                                <td class="px-4 py-4 text-center">{{ $designation->user->name}}</td>
 
                             </tr>
                         @endforeach
