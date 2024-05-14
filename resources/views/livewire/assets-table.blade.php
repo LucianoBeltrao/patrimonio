@@ -23,6 +23,7 @@
                         <th class="p-4 cursor-pointer text-center" x-on:click="sortBy('price')">Valor</th>
                         <th class="p-4 cursor-pointer text-center" x-on:click="sortBy('price')">Alterar</th>
                         <th class="p-4 cursor-pointer text-center" x-on:click="sortBy('price')">Deletar</th>
+                        <th class="p-4 cursor-pointer text-center" x-on:click="sortBy('price')">Visualizar</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -41,6 +42,11 @@
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 7h14m-9 3v8m4-8v8M10 3h4a1 1 0 0 1 1 1v3H9V4a1 1 0 0 1 1-1ZM6 7h12v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7Z"/>
                                   </svg>
                                   </button> </td>
+                            <td class="px-4 py-4 "> <button 
+                            class="text-white p-4 cursor-pointer text-center"><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h11m0 0-4-4m4 4-4 4m-5 3H3a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h3"></path>
+                            </svg>
+                                </button> </td>
                         </tr>
                     @endforeach
                     </div>

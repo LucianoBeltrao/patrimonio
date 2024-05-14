@@ -8,6 +8,7 @@ use App\Livewire\DesignationTable;
 use App\Livewire\EditAsset;
 use App\Livewire\Forms\AssetForm;
 use App\Livewire\ProjectTable;
+use App\Livewire\ShowAsset;
 use App\Livewire\UserTable;
 
 
@@ -20,6 +21,7 @@ Route::get('/users', UserTable::class)->name('users');
 Route::get('/assets', AssetsTable::class)->name('assets');
 Route::get('/assetform', CreateAsset::class)->name('assetform');
 Route::get('/editasset/{asset}', EditAsset::class)->name('editasset');
+Route::get('/show', ShowAsset::class)->name('show');
 
 
 Route::get('/departments', DepartmentsTable::class)->name('departments');

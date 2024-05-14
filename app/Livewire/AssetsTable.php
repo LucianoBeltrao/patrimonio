@@ -6,6 +6,7 @@ use App\Livewire\Forms\AssetForm;
 use Livewire\Component;
 use App\Models\Asset;
 use App\Models\Category;
+use App\Models\Designation;
 use Livewire\WithPagination;
 
 class AssetsTable extends Component
@@ -39,6 +40,7 @@ class AssetsTable extends Component
     public function delete(Asset $asset)
     {
             $asset->delete();
+            
           
             session()->flash('message', 'Ativo excluído com sucesso.');
             return $this->redirect('/assets', navigate:true);
@@ -87,5 +89,16 @@ class CreateAsset extends Component
 
 }
 
+
+
+class ShowAsset extends Component
+{
+
+    public function render()
+    {
+        return view('livewire.show');
+    }
+
+}
 
 
