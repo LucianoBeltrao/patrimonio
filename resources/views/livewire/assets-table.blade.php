@@ -2,6 +2,8 @@
     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
         <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
 
+            <p class="text-3xl font-medium text-gray-900 dark:text-white container mx-auto px-4 py-5">Ativos Registrados</p>
+           
 
             <div class="flex items-right justify-end py-2">
 
@@ -22,8 +24,7 @@
                         <th class="p-4 cursor-pointer text-center" x-on:click="sortBy('description')">Categoria</th>
                         <th class="p-4 cursor-pointer text-center" x-on:click="sortBy('price')">Valor</th>
                         <th class="p-4 cursor-pointer text-center" x-on:click="sortBy('price')">Alterar</th>
-                        <th class="p-4 cursor-pointer text-center" x-on:click="sortBy('price')">Deletar</th>
-                        <th class="p-4 cursor-pointer text-center" x-on:click="sortBy('price')">Visualizar</th>
+                    
                     </tr>
                 </thead>
                 <tbody>
@@ -35,15 +36,15 @@
                             <td class="px-4 py-4 ">{{ $asset->description }}</td>
                             <td class="px-4 py-4 ">{{ $asset->category->name }}</td>
                             <td class="px-4 py-4 ">{{ $asset->price }}</td>
-                            <td class="px-4 py-4 "> <a href="{{ route('editasset', $asset->id) }}"
-                                class="text-white bg-gradient-to-r from-secondary-300 via-secondary-400 to-secondary-400  hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-primary-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"> Editar</a>
-                            <td class="px-4 py-4 "> <button wire:click="delete({{ $asset->id }})"
-                                class="text-white p-4 cursor-pointer text-center"><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                            <td class="px-6 py-4 text-right flex items-right justify-end py-2" > <a href="{{ route('editasset', $asset->id) }}"
+                                class="text-white bg-gradient-to-r from-secondary-300 via-secondary-400 to-secondary-400  hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-primary-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-8"> Editar</a>
+                            <button wire:click="delete({{ $asset->id }})"
+                                class="text-white p-4 cursor-pointer text-center me-2 mb-4"><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" >
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 7h14m-9 3v8m4-8v8M10 3h4a1 1 0 0 1 1 1v3H9V4a1 1 0 0 1 1-1ZM6 7h12v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7Z"/>
                                   </svg>
-                                  </button> </td>
-                            <td class="px-4 py-4 "> <button 
-                            class="text-white p-4 cursor-pointer text-center"><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16">
+                                  </button> 
+                            <button 
+                            class="text-white p-4 cursor-pointer text-center me-2 mb-4"><svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16">
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h11m0 0-4-4m4 4-4 4m-5 3H3a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h3"></path>
                             </svg>
                                 </button> </td>

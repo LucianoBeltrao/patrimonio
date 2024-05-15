@@ -7,6 +7,8 @@ use Livewire\Component;
 use App\Models\Asset;
 use App\Models\Category;
 use App\Models\Designation;
+use Livewire\Attributes\Validate;
+use Livewire\Features\SupportFileUploads\WithFileUploads;
 use Livewire\WithPagination;
 
 class AssetsTable extends Component
@@ -99,6 +101,21 @@ class ShowAsset extends Component
         return view('livewire.show');
     }
 
+}
+
+
+
+class UploadPhoto extends Component
+{
+    use WithFileUploads;
+ 
+    #[Validate('image|max:1024')] // 1MB Max
+    public $photo;
+ 
+    public function save()
+    {
+        $this->photo->store(path: 'photos');
+    }
 }
 
 
