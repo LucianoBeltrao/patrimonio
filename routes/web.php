@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Livewire\AssetsTable;
 use App\Livewire\CreateAsset;
+use App\Livewire\CreateDesignation;
 use App\Livewire\DepartmentsTable;
 use App\Livewire\DesignationTable;
 use App\Livewire\EditAsset;
@@ -33,6 +34,7 @@ Route::get('/projects', ProjectTable::class)->name('projects');
 
 
 Route::get('/designations', DesignationTable::class)->name('designations');
+Route::get('/designationform', CreateDesignation::class)->name('designationform');
 //Route::get('/designations', DesignationTable::class)->name('designations');
 
 
