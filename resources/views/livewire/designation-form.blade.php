@@ -17,8 +17,8 @@
 
                         <div class="py-5">
                             <label for="countries" class="block mb-1 text-sm font-medium text-gray-900 dark:text-white"
-                                wire:model="projects">Projeto</label>
-                            <select wire:model.live="form.projects"
+                                wire:model="project_id">Projeto</label>
+                            <select wire:model.live="form.project_id"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                                 <option selected>Escolha um Projeto</option>
                                 @foreach ($projects as $project)
@@ -26,7 +26,7 @@
                                 @endforeach
                             </select>
                             <div>
-                                @error('form.projects')
+                                @error('form.project_id')
                                     <span class="error">{{ $message }}</span>
                                 @enderror
                             </div>
@@ -35,8 +35,8 @@
 
                         <div class="py-5">
                             <label for="countries" class="block mb-1 text-sm font-medium text-gray-900 dark:text-white"
-                                wire:model="departments">Departamento</label>
-                            <select wire:model.live="form.departments"
+                                wire:model="department_id">Departamento</label>
+                            <select wire:model.live="form.department_id"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                                 <option selected>Escolha um Departamento</option>
                                 @foreach ($departments as $department)
@@ -44,7 +44,7 @@
                                 @endforeach
                             </select>
                             <div>
-                                @error('form.departments')
+                                @error('form.department_id')
                                     <span class="error">{{ $message }}</span>
                                 @enderror
                             </div>
@@ -54,8 +54,8 @@
 
                         <div class="py-5">
                             <label for="countries" class="block mb-1 text-sm font-medium text-gray-900 dark:text-white"
-                                wire:model="assets">Ativo</label>
-                            <select wire:model.live="form.assets"
+                                wire:model="asset_id">Ativo</label>
+                            <select wire:model.live="form.asset_id"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                                 <option selected>Escolha o Ativo</option>
                                 @foreach ($assets as $asset)
@@ -63,35 +63,18 @@
                                 @endforeach
                             </select>
                             <div>
-                                @error('form.assets')
+                                @error('form.asset_id')
                                     <span class="error">{{ $message }}</span>
                                 @enderror
                             </div>
 
                         </div>
 
-                        <div class="py-5">
-                            <label for="countries" class="block mb-1 text-sm font-medium text-gray-900 dark:text-white"
-                                wire:model="records">Ativo</label>
-                            <select wire:model.live="form.records"
-                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                <option selected>Escolha o Registro</option>
-                                @foreach ($records as $record)
-                                    <option value="{{ $record->id }}">{{ $record->record }}</option>
-                                @endforeach
-                            </select>
-                            <div>
-                                @error('form.records')
-                                    <span class="error">{{ $message }}</span>
-                                @enderror
-                            </div>
-
-                        </div>
 
                         <div class="py-5">
                             <label for="countries" class="block mb-1 text-sm font-medium text-gray-900 dark:text-white"
-                                wire:model="users">Responsável</label>
-                            <select wire:model.live="form.users"
+                                wire:model="user_id">Responsável</label>
+                            <select wire:model.live="form.user_id"
                                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                                 <option selected>Escolha o Registro</option>
                                 @foreach ($users as $user)
@@ -99,7 +82,7 @@
                                 @endforeach
                             </select>
                             <div>
-                                @error('form.users')
+                                @error('form.user_id')
                                     <span class="error">{{ $message }}</span>
                                 @enderror
                             </div>
@@ -118,6 +101,23 @@
 
                             <div>
                                 @error('form.quantity')
+                                    <span class="error">{{ $message }}</span>
+                                @enderror
+                            </div>
+                        </div>
+
+
+                        <div class="py-5">
+                            <div>
+                                <label for="company"
+                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Preço</label>
+                                <input type="text" id="company"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                    wire:model="form.unitary_price" />
+                            </div>
+
+                            <div>
+                                @error('form.unitary_price')
                                     <span class="error">{{ $message }}</span>
                                 @enderror
                             </div>

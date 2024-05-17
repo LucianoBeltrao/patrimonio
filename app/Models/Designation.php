@@ -31,4 +31,10 @@ class Designation extends Model
         return $this->belongsTo(User::class);
     }
 
+    protected $fillable = [
+        'user_id', 'project_id', 'department_id', 'asset_id', 'quantity', 'unitary_price'// Adicionando category_id aos campos fillable
+        // Outros campos fillable aqui
+    ];
+
+
 }

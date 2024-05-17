@@ -11,38 +11,40 @@ class DesignationForm extends Form
     public ?Designation $designation;
 
     #[Validate('min:1')]
-    public $projects = '';
+    public $project_id = '';
 
     #[Validate('min:1')]
-    public $departments = '';
- 
-    #[Validate('min:1')]
-    public $records = '';
+    public $department_id = '';
 
     #[Validate('min:1')]
-    public $assets = '';
+    public $asset_id = '';
     
     #[Validate('min:1')]
     public $quantity = '';
 
-    #[Validate('rmin:1')]
-    public $users = '';
+    #[Validate('min:1')]
+    public $user_id = '';
+
+    #[Validate('min:1')]
+    public $unitary_price;
 
     public function setDesignation(Designation $designation)
     {
         $this->designation = $designation;
 
-        $this->projects = $designation->project;
+        $this->project_id = $designation->project;
 
-        $this->departments = $designation->department;
+        $this->department_id = $designation->department;
 
-        $this->records = $designation->record;
+        $this->asset_id = $designation->asset;
 
-        $this->assets = $designation->asset;
+        $this->user_id = $designation->user;
 
         $this->quantity = $designation->quantity;
 
-        $this->users = $designation->user;
+        $this->unitary_price = $designation->unitary_price;
+
+        
     }
 
     public function update()
