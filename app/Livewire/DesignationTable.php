@@ -17,9 +17,9 @@ class DesignationTable extends Component
     public $assets;
 
     public $projects;
-    
+
     public $departments;
-    
+
     public $users;
 
 
@@ -34,15 +34,22 @@ class DesignationTable extends Component
         $this->departments = Designation::with('department')->get();
 
         $this->users  = Designation::with('user')->get();
-        
-
     }
 
-    
+
     public function render()
     {
         return view('livewire.designation-table');
     }
+
+    public function delete(Designation $designation)
+    {
+            $designation->delete();
+            
+          
+            session()->flash('success', 'Designação excluída com sucesso.');
+            return $this->redirect('/designations', navigate:true);
+     }
 }
 
 
@@ -64,29 +71,28 @@ class CreateDesignation extends Component
 
     public function mount()
     {
-        $this->projects= Project::all();
+        $this->projects = Project::all();
 
-        $this->departments= Department::all();
+        $this->departments = Department::all();
 
-        $this->assets= Asset::all();
+        $this->assets = Asset::all();
 
-        $this->users= User::all();
-
+        $this->users = User::all();
     }
 
     public DesignationForm $form;
 
     public function save()
     {
-        
+
 
         $this->validate();
- 
+
         Designation::create(
-            $this->form->all() 
+            $this->form->all()
         );
 
-        
+
         return $this->redirect('/designations');
     }
 
@@ -94,5 +100,4 @@ class CreateDesignation extends Component
     {
         return view('livewire.designation-form');
     }
-
 }

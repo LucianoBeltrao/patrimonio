@@ -7,6 +7,7 @@ use App\Livewire\CreateDesignation;
 use App\Livewire\DepartmentsTable;
 use App\Livewire\DesignationTable;
 use App\Livewire\EditAsset;
+use App\Livewire\EditDesignation;
 use App\Livewire\Forms\AssetForm;
 use App\Livewire\ProjectTable;
 use App\Livewire\ShowAsset;
@@ -35,6 +36,7 @@ Route::get('/projects', ProjectTable::class)->name('projects');
 
 Route::get('/designations', DesignationTable::class)->name('designations');
 Route::get('/designationform', CreateDesignation::class)->name('designationform');
+Route::get('/editdesignation/{designation}', EditDesignation::class)->name('editdesignation');
 //Route::get('/designations', DesignationTable::class)->name('designations');
 
 

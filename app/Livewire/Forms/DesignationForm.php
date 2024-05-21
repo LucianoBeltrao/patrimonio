@@ -18,7 +18,7 @@ class DesignationForm extends Form
 
     #[Validate('min:1')]
     public $asset_id = '';
-    
+
     #[Validate('min:1')]
     public $quantity = '';
 
@@ -32,19 +32,17 @@ class DesignationForm extends Form
     {
         $this->designation = $designation;
 
-        $this->project_id = $designation->project;
+        $this->project_id = $designation->project_id;
 
-        $this->department_id = $designation->department;
+        $this->department_id = $designation->department_id;
 
-        $this->asset_id = $designation->asset;
+        $this->asset_id = $designation->asset_id;
 
-        $this->user_id = $designation->user;
+        $this->user_id = $designation->user_id;
 
         $this->quantity = $designation->quantity;
 
         $this->unitary_price = $designation->unitary_price;
-
-        
     }
 
     public function update()
@@ -53,6 +51,5 @@ class DesignationForm extends Form
         $this->designation->update(
             $this->all()
         );
-
     }
 }

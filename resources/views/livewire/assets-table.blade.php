@@ -59,7 +59,7 @@
                                             <path
                                                 d="M8.139 10.411 5.289 13.3A1 1 0 0 0 5 14v2a1 1 0 0 0 1 1h2a1 1 0 0 0 .7-.288l2.886-2.851-3.447-3.45ZM14 8a2.463 2.463 0 0 0-3.484 0l-.971.983 3.468 3.468.987-.971A2.463 2.463 0 0 0 14 8Z">
                                             </path>
-                                        </svg></a>
+                                    </svg></a>
                                     <button wire:click="delete({{ $asset->id }})"
                                         class="text-white p-4 cursor-pointer text-center me-2 mb-4"><svg
                                             class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
