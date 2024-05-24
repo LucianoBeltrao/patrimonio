@@ -44,12 +44,12 @@ class DesignationTable extends Component
 
     public function delete(Designation $designation)
     {
-            $designation->delete();
-            
-          
-            session()->flash('success', 'Designação excluída com sucesso.');
-            return $this->redirect('/designations', navigate:true);
-     }
+        $designation->delete();
+
+
+        session()->flash('success', 'Designação excluída com sucesso.');
+        return $this->redirect('/designations', navigate: true);
+    }
 }
 
 
@@ -65,8 +65,9 @@ class CreateDesignation extends Component
 
     public $designations;
 
+    public $selectedProject;
 
-
+    public DesignationForm $form;
 
 
     public function mount()
@@ -80,7 +81,13 @@ class CreateDesignation extends Component
         $this->users = User::all();
     }
 
-    public DesignationForm $form;
+
+    public function updatedselectedProject($project)
+    {
+
+        $this->departments = Department::where('project_id', $project)->get();
+    }
+    
 
     public function save()
     {
