@@ -65,7 +65,7 @@ class CreateDesignation extends Component
 
     public $designations;
 
-    public $selectedProject;
+    public $selectedProject = null;
 
     public DesignationForm $form;
 
@@ -84,14 +84,13 @@ class CreateDesignation extends Component
 
     public function updatedselectedProject($project)
     {
-
         $this->departments = Department::where('project_id', $project)->get();
     }
     
 
     public function save()
     {
-
+        $this->form->project_id = $this->selectedProject;
 
         $this->validate();
 
