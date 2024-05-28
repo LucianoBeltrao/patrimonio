@@ -114,7 +114,8 @@ class UploadPhoto extends Component
  
     public function save()
     {
-        $this->photo->store(path: 'photos');
+
+        $this->photo->store(path: 'public');
     }
 }
 

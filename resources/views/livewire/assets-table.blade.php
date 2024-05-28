@@ -2,7 +2,9 @@
     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
         <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
 
-            <p class="text-3xl font-medium text-orange-500  bg-gradient-to-r from-secondary-300 via-secondary-400 to-secondary-400 dark:text-white container mx-auto px-4 py-5">Ativos Registrados
+            <p
+                class="text-3xl font-medium text-orange-500  bg-gradient-to-r from-secondary-300 via-secondary-400 to-secondary-400 dark:text-white container mx-auto px-4 py-5">
+                Ativos Registrados
             </p>
 
 
@@ -40,17 +42,17 @@
                                 <td class="px-4 py-4 ">{{ $asset->category->name }}</td>
                                 <td class="px-4 py-4 ">{{ $asset->price }}</td>
                                 <td class="px-2 py-2 text-right flex items-right justify-end py-2">
-                                    <button class="text-white p-4 cursor-pointer text-center me-2 mb-4"><svg
+                                    <a href="{{ route('show', $asset->id) }}"
+                                        class="text-white p-4 cursor-pointer text-center me-1 mb-4"><svg
                                             class="w-5 h-5 text-gray-800 dark:text-white" aria-hidden="true"
                                             xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16">
                                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                                 stroke-width="2"
                                                 d="M4 8h11m0 0-4-4m4 4-4 4m-5 3H3a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h3">
                                             </path>
-                                        </svg>
-                                    </button>
+                                        </svg></a>
                                     <a href="{{ route('editasset', $asset->id) }}"
-                                        class="text-white p-4 cursor-pointer text-center me-2 mb-4"> <svg
+                                        class="text-white p-4 cursor-pointer text-center me-1 mb-2"> <svg
                                             class="w-5 h-5 text-gray-800 dark:text-white" aria-hidden="true"
                                             xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
                                             <path
@@ -59,9 +61,9 @@
                                             <path
                                                 d="M8.139 10.411 5.289 13.3A1 1 0 0 0 5 14v2a1 1 0 0 0 1 1h2a1 1 0 0 0 .7-.288l2.886-2.851-3.447-3.45ZM14 8a2.463 2.463 0 0 0-3.484 0l-.971.983 3.468 3.468.987-.971A2.463 2.463 0 0 0 14 8Z">
                                             </path>
-                                    </svg></a>
+                                        </svg></a>
                                     <button wire:click="delete({{ $asset->id }})"
-                                        class="text-white p-4 cursor-pointer text-center me-2 mb-4"><svg
+                                        class="text-white p-4 cursor-pointer text-center me-1 mb-3"><svg
                                             class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
                                             xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                             fill="none" viewBox="0 0 24 24">
