@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('name'); //nome do ativo
             $table->text('description'); //descrição básica
             $table->decimal('price'); //19.99 
+            $table->text('profile_photo_path')->nullable();
             $table->timestamps();
         });
     }

@@ -6,14 +6,13 @@
 
             <div class="flex items-right justify-end py-2">
 
-                <form wire:submit="save">
+                <form wire:submit.prevent="storagePhoto">
                     <input type="file" wire:model="photo">
+
+                    @error('photo') {{ $message }}@enderror
                  
-                    @error('photo') <span class="error">{{ $message }}</span> @enderror
-                 
-                    <button type="submit"><svg class="animate-spin h-5 w-5 mr-3 ..." viewBox="0 0 24 24">
-                        <!-- ... -->
-                      </svg>
+                    <br>
+                    <button type="submit">
                       Save photo</button>
                 </form>
 

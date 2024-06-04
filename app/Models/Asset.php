@@ -18,7 +18,7 @@ class Asset extends Model
     
     
     protected $fillable = [
-        'record', 'category_id', 'name', 'description', 'price'// Adicionando category_id aos campos fillable
+        'record', 'category_id', 'name', 'description', 'price', 'profile_photo_path',// Adicionando category_id aos campos fillable
         // Outros campos fillable aqui
     ];
 

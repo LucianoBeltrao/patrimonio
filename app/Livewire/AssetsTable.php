@@ -10,6 +10,7 @@ use App\Models\Designation;
 use Livewire\Attributes\Validate;
 use Livewire\Features\SupportFileUploads\WithFileUploads;
 use Livewire\WithPagination;
+use Illuminate\Support\Str;
 
 class AssetsTable extends Component
 {
@@ -93,29 +94,39 @@ class CreateAsset extends Component
 
 
 
-class ShowAsset extends Component
+
+class UploadPhoto extends Component
 {
+    use WithFileUploads;
+ 
+    
+    public $photo;
+
 
     public function render()
     {
         return view('livewire.show');
     }
 
-}
-
-
-
-class UploadPhoto extends Component
-{
-    use WithFileUploads;
  
-    #[Validate('image|max:1024')] // 1MB Max
-    public $photo;
- 
-    public function save()
+    public function storagePhoto(Asset $asset)
     {
 
-        $this->photo->store(path: 'public');
+        
+        
+        $this->validate([
+            'photo' => 'required|image|max:1024'
+        ]);
+
+        $nameFile = Str::slug($asset->name) . '.' . $this->photo->getClientOriginalExtension();
+
+        if( $path = $this->photo->storeAs('assets', $nameFile)){
+            $asset->update([
+                'profile_photo_path' => $path
+            ]);
+       }
+
+       return redirect()->route('assets');
     }
 }
 
