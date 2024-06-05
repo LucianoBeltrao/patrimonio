@@ -21,7 +21,7 @@ use App\Livewire\UserTable;
 Route::get('/users', UserTable::class)->name('users');
 
 
-Route::get('/assets', AssetsTable::class)->name('assets');
+Route::get('/assets', AssetsTable::class)->name('assets')->middleware('auth');
 Route::get('/assetform', CreateAsset::class)->name('assetform');
 Route::get('/editasset/{asset}', EditAsset::class)->name('editasset');
 Route::get('/show', UploadPhoto::class)->name('show')->middleware('auth');
