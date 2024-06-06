@@ -42,7 +42,7 @@
                                 <td class="px-4 py-4 ">{{ $asset->category->name }}</td>
                                 <td class="px-4 py-4 ">{{ $asset->price }}</td>
                                 <td class="px-2 py-2 text-right flex items-right justify-end py-2">
-                                    <a href="{{ route('show', $asset->id) }}"
+                                    <a href="{{ route('show',  $asset->id) }}"
                                         class="text-white p-4 cursor-pointer text-center me-1 mb-4"><svg
                                             class="w-5 h-5 text-gray-800 dark:text-white" aria-hidden="true"
                                             xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16">

@@ -6,7 +6,7 @@
 
             <div class="flex items-right justify-end py-2">
 
-                <form wire:submit.prevent="storagePhoto">
+                <form wire:submit.prevent="save">
                     <input type="file" wire:model="photo">
 
                     @error('photo') {{ $message }}@enderror
@@ -16,6 +16,10 @@
                       Save photo</button>
                 </form>
 
+                @if ($photo)
+                Photo Preview:
+                <img src="{{ $photo->temporaryUrl() }}" width="200">
+                @endif
                 
 
             </div>
