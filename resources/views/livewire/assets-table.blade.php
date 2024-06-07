@@ -23,6 +23,7 @@
             <table class="w-full border-collapse table-sm">
                 <thead>
                     <tr class="bg-primary-500">
+                        <th class="p-4 cursor-pointer text-center" x-on:click="sortBy('name')">Foto</th>
                         <th class="p-4 cursor-pointer text-center" x-on:click="sortBy('name')">Registro</th>
                         <th class="p-4 cursor-pointer text-center" x-on:click="sortBy('name')">Nome</th>
                         <th class="p-4 cursor-pointer text-center" x-on:click="sortBy('description')">Descrição</th>
@@ -35,7 +36,18 @@
                 <tbody>
                     <div>
                         @foreach ($assets as $asset)
+                        
                             <tr class="border-b border-primary-500">
+                                <td class="px-4 py-4 ">
+                                    @if($asset->photo)
+
+                                        <img src="{{ url("storage/{$asset->photo}") }}" alt="{{ $asset->name }}" class="rounded h-8 w-8" >
+
+                                    @else
+
+                                        <img src="{{ url('images/without-image.png') }}" alt="{{ $asset->name }}"  class="rounded-full h-8 w-9" >
+                                    @endif
+                                </td>
                                 <td class="px-4 py-4 ">{{ $asset->record }}</td>
                                 <td class="px-4 py-4 ">{{ $asset->name }}</td>
                                 <td class="px-4 py-4 ">{{ $asset->description }}</td>

@@ -3,6 +3,7 @@
 namespace App\Livewire;
 
 use App\Models\Asset;
+use App\Models\Category;
 use Livewire\Component;
 use Livewire\Features\SupportFileUploads\WithFileUploads;
 use Illuminate\Support\Str;
@@ -14,6 +15,24 @@ class UploadPhoto extends Component
     public $photo;
     public $assetId;
 
+    public $assetname;
+
+    public $categories;
+
+    public $selectedCategory;
+
+    public $categoryname;
+
+    public $record;
+
+    public $descricao;
+
+    public $valor;
+
+    public $photoasset;
+
+
+
     public function mount($assetId)
     {
         $this->$assetId = $assetId;
@@ -22,6 +41,24 @@ class UploadPhoto extends Component
 
     public function render()
     {
+        $asset = Asset::find($this->assetId);
+
+        $this->assetname = $asset->name;
+        $this->record = $asset->record;
+        $this->valor = $asset->price;
+        $this->photoasset = $asset->profile_photo_path;
+
+        $this->categories = Category::all();
+        $this->selectedCategory = $asset->category_id;
+        
+        $categoryshow = Category::find($this->selectedCategory);
+        $this->categoryname = $categoryshow->name;
+
+
+        
+        
+    
+
         return view('livewire.show');
     }
 
@@ -34,7 +71,7 @@ class UploadPhoto extends Component
         // Encontra o item pelo ID
         $asset = Asset::find($this->assetId);
 
-        $filename =  Str::slug($asset->name). '.' . $this->photo->getClientOriginalName();
+        $filename =  Str::slug($asset->name) . '.' . $this->photo->getClientOriginalName();
 
         $path = $this->photo->storeAs('assets', $filename, 'public');
 
@@ -47,43 +84,3 @@ class UploadPhoto extends Component
         return redirect()->route('assets');
     }
 }
-
-// class UploadPhoto extends Component
-// {
-//     use WithFileUploads;
-
-//     public $photo;
-//     public $assetId; // Assumindo que você está passando o ID do asset para o componente
-
-//     public function render()
-//     {
-//         return view('livewire.show');
-//     }
-
-//     public function storagePhoto()
-//     {
-//         $this->validate([
-//             'photo' => 'required|image|max:1024'
-//         ]);
-
-//         // Encontra o asset pelo ID
-//         $asset = Asset::find($this->assetId);
-
-//         if ($asset) {
-//             // Gera o nome do arquivo
-//             $nameFile = Str::slug($asset->name) . '.' . $this->photo->getClientOriginalExtension();
-
-//             // Armazena a foto no diretório 'assets'
-//             if ($path = $this->photo->storeAs('assets', $nameFile, 'public')) {
-//                 // Atualiza o caminho da foto no asset
-//                 $asset->update([
-//                     'profile_photo_path' => $path
-//                 ]);
-//             }
-
-//             return redirect()->route('/assets');
-//         } else {
-//             session()->flash('error', 'Asset não encontrado.');
-//         }
-//     }
-// }

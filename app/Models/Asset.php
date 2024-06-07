@@ -28,6 +28,12 @@ class Asset extends Model
         return $this->hasOne(Designation::class);
     }
 
+
+    public function getPhotoAttribute()
+    {
+        return $this->profile_photo_path;
+    }
+
 }
 
 

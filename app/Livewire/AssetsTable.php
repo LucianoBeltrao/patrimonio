@@ -90,4 +90,6 @@ class CreateAsset extends Component
         return view('livewire.asset-form');
     }
 
+    
+
 }
