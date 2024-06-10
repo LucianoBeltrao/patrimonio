@@ -2,10 +2,12 @@
     <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
         <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
 
-            
-                <h2 class="text-3xl font-medium text-orange-500  bg-gradient-to-r from-secondary-300 via-secondary-400 to-secondary-400 dark:text-white container mx-auto px-4 py-5">Editando
-                    Ativo: {{ $assetname }}</h2>
-            
+
+            <h2
+                class="text-3xl font-medium text-orange-500  bg-gradient-to-r from-secondary-300 via-secondary-400 to-secondary-400 dark:text-white container mx-auto px-4 py-5">
+                Editando
+                Ativo: {{ $assetname }}</h2>
+
 
             <div class="flex items-right justify-end py-2">
 
@@ -17,7 +19,7 @@
 
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
 
-    
+
 
                 <div class="grid gap-6 mb-6 md:grid-cols-2 py-5">
 
@@ -94,6 +96,22 @@
                         </div>
 
 
+                        <div class="py-5">
+                            <input type="file" wire:model="photo">
+
+                            @error('photo')
+                                {{ $message }}
+                            @enderror
+
+
+
+
+
+                            @if ($photo)
+                                Photo Preview:
+                                <img src="{{ $photo->temporaryUrl() }}" width="200">
+                            @endif
+                        </div>
 
                         <div class="py-2">
 
