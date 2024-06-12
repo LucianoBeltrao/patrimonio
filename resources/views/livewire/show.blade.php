@@ -16,60 +16,34 @@
                     Todos os Ativos </a>
 
             </div>
-            
-
-            <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-
-                <h2
-                    class="text-3xl font-medium text-orange-500  bg-gradient-to-r  dark:text-white container mx-auto px-4 py-5">
-                    Ativo: {{ $assetname }}</h2>
-
-                <h4
-                    class="text-3xl font-medium text-orange-500  bg-gradient-to-r  dark:text-white container mx-auto px-4 py-5">
-                    Categoria:
-                    {{ $categoryname }}</h4>
-
-                <h4
-                    class="text-3xl font-medium text-orange-500  bg-gradient-to-r  dark:text-white container mx-auto px-4 py-5">
-                    Registro:
-                    {{ $record }}</h4>
-
-                <h4
-                    class="text-3xl font-medium text-orange-500  bg-gradient-to-r  dark:text-white container mx-auto px-4 py-5">
-                    Valor do Ativo:
-                    {{ $valor }}</h4>
-                <form wire:submit.prevent="save">
-                    <input type="file" wire:model="photo">
-
-                    @error('photo')
-                        {{ $message }}
-                    @enderror
-
-                    <br>
-                    <button type="submit">
-                        Save photo</button>
-                </form>
 
 
-
-                @if ($photo)
-                    Photo Preview:
-                    <img src="{{ $photo->temporaryUrl() }}" width="200">
-                @endif
+            <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 flex items-center">
 
 
-                <div class="grid gap-6 mb-6 md:grid-cols-2 py-5">
-
-
-
-
-
+                <div>
+                    <h2 class="text-3xl font-medium text-orange-500 dark:text-white py-2">Ativo: {{ $assetname }}</h2>
+                    <h4 class="text-3xl font-medium text-orange-500 dark:text-white py-2">Categoria: {{ $categoryname }}</h4>
+                    <h4 class="text-3xl font-medium text-orange-500 dark:text-white py-2">Registro: {{ $record }}</h4>
+                    <h4 class="text-3xl font-medium text-orange-500 dark:text-white py-2">Valor do Ativo: {{ $valor }}</h4>
                 </div>
 
-            </div>
-        </div>
 
+                @if ($photoasset)
+                    <img class="h-auto max-w-md ms-auto rounded-lg" src="{{ url("storage/{$photoasset}") }}"
+                        alt="{{ $assetname }}">
+                @else
+                    <img src="{{ url('images/without-image.png') }}" alt="{{ $assetname }}"
+                        class="rounded-full h-80 w-80">
+                @endif
+
+            </div>
+
+
+        </div>
     </div>
+
+</div>
 
 </div>
 

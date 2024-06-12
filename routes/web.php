@@ -24,7 +24,7 @@ Route::get('/users', UserTable::class)->name('users');
 Route::get('/assets', AssetsTable::class)->name('assets')->middleware('auth');
 Route::get('/assetform', CreateAsset::class)->name('assetform');
 Route::get('/editasset/{asset}', EditAsset::class)->name('editasset');
-Route::get('/show/{assetId}', UploadPhoto::class)->name('show');
+Route::get('/show/{assetId}', ShowAsset::class)->name('show');
 
 
 Route::get('/departments', DepartmentsTable::class)->name('departments');

@@ -62,22 +62,10 @@
                                 class="flex flex-col items-start gap-6 overflow-hidden rounded-lg  p-6 shadow-[0px_14px_34px_0px_rgba(0,0,0,0.08)] ring-1 ring-white/[0.05] transition duration-300 hover:text-black/70 hover:ring-black/20 focus:outline-none focus-visible:ring-[#FF2D20] md:row-span-3 lg:p-10 lg:pb-10 dark:bg-zinc-900 dark:ring-zinc-800 dark:hover:text-white/70 dark:hover:ring-zinc-700 dark:focus-visible:ring-[#FF2D20]"
                             >
                             <div class="bg-gray-50 text-black/50 dark:bg-black dark:text-white/50">
-                                <p class="text-orange-500">
-                                O controle de patrimônio é essencial para empresas de todos os portes, pois permite acompanhar e 
-                                gerenciar todos os bens e recursos da organização. Desde equipamentos e máquinas até móveis e imóveis, 
-                                o controle adequado garante que os ativos estejam sendo utilizados de forma eficiente e produtiva. 
-                                Além disso, o controle de patrimônio auxilia na identificação de possíveis perdas, extravios ou danos 
-                                aos bens da empresa, o que contribui para a redução de prejuízos e para a tomada de decisões estratégicas. 
-                                Utilizar ferramentas e sistemas específicos para o controle de patrimônio é fundamental para garantir a 
-                                precisão e confiabilidade das informações, bem como para facilitar o processo de gestão e manutenção dos ativos.
-                            </p>
+                                
+                                <p class="mb-3 text-gray-500 dark:text-gray-400 first-line:uppercase first-line:tracking-widest first-letter:text-7xl first-letter:font-bold first-letter:text-gray-900 dark:first-letter:text-gray-100 first-letter:me-3 first-letter:float-start"></p>
+                                <p class="text-gray-500 dark:text-gray-400"></p>
 
-                                Um bom controle de patrimônio permite à empresa otimizar seus recursos, evitando desperdícios e garantindo um 
-                                melhor aproveitamento dos bens disponíveis. Através do inventário e da catalogação dos ativos, é possível manter 
-                                um registro atualizado de todos os itens que compõem o patrimônio da empresa, facilitando sua localização e 
-                                utilização. Além disso, o controle de patrimônio auxilia na identificação de possíveis fraudes ou desvios de 
-                                recursos, promovendo a transparência e a integridade na gestão empresarial. Por meio de procedimentos adequados 
-                                e da utilização de tecnologias modernas, é possível tornar o controle de patrimônio ainda mais eficiente e preciso.
 
                             </div>
                                 

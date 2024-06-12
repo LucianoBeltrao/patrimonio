@@ -5,12 +5,10 @@ namespace App\Livewire;
 use App\Models\Asset;
 use App\Models\Category;
 use Livewire\Component;
-use Livewire\Features\SupportFileUploads\WithFileUploads;
-use Illuminate\Support\Str;
 
-class UploadPhoto extends Component
+
+class ShowAsset extends Component
 {
-    use WithFileUploads;
 
     public $photo;
     public $assetId;
@@ -53,34 +51,10 @@ class UploadPhoto extends Component
         
         $categoryshow = Category::find($this->selectedCategory);
         $this->categoryname = $categoryshow->name;
-
-
         
-        
-    
 
         return view('livewire.show');
     }
 
-    public function save()
-    {
-        $this->validate([
-            'photo' => 'required|image|max:1024', // 1MB Max
-        ]);
-
-        // Encontra o item pelo ID
-        $asset = Asset::find($this->assetId);
-
-        $filename =  Str::slug($asset->name) . '.' . $this->photo->getClientOriginalName();
-
-        $path = $this->photo->storeAs('assets', $filename, 'public');
-
-        $asset->update([
-            'profile_photo_path' => $path
-        ]);
-
-        session()->flash('message', 'Photo successfully uploaded.');
-
-        return redirect()->route('assets');
-    }
+ 
 }
