@@ -97,21 +97,19 @@
 
 
                         <div class="py-5">
-                            <input type="file" wire:model="photo">
+                            <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="photo">Foto</label>
+                            <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" type="file" wire:model="form.photo" id="photo">
 
                             @error('photo')
                                 {{ $message }}
                             @enderror
 
-
-
-
-
-                            @if ($photo)
+                            @if ($form->photo)
                                 Photo Preview:
-                                <img src="{{ $photo->temporaryUrl() }}" width="200">
+                                <img src="{{ $form->photo->temporaryUrl() }}" width="200">
                             @endif
                         </div>
+                        
 
                         <div class="py-2">
 

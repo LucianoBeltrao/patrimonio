@@ -55,32 +55,37 @@ class AssetsTable extends Component
 
 class CreateAsset extends Component
 {
+
+    use WithFileUploads;
+
     public $categories;
 
-    public $assets;
-
     public $selectedCategory = null;
+
+    public AssetForm $form;
 
 
     public function mount()
     {
         $this->categories = Category::all();
+        
     }
 
-
-
-
-    public AssetForm $form;
 
     public function save()
     {
         
         $this->validate();
  
-        Asset::create(
-            $this->form->all() 
-        );
+        $assetData = $this->form->all();
 
+        if ($this->form->photo) {
+            $filename = Str::slug($this->form->name) . '.' . $this->form->photo->getClientOriginalExtension();
+            $path = $this->form->photo->storeAs('assets', $filename, 'public');
+            $assetData['profile_photo_path'] = $path;
+        }
+
+        Asset::create($assetData);
         
         return $this->redirect('/assets');
     }

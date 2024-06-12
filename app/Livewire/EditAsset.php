@@ -6,7 +6,6 @@ use App\Livewire\Forms\AssetForm;
 use App\Models\Asset;
 use App\Models\Category;
 use Livewire\Component;
-use Illuminate\Support\Str;
 use Livewire\Features\SupportFileUploads\WithFileUploads;
 
 
@@ -26,8 +25,6 @@ class EditAsset extends Component
 
     public $assetId;
 
-    public $photo;
-
     public $asset;
 
     public function mount(Asset $asset)
@@ -44,23 +41,10 @@ class EditAsset extends Component
     public function update()
     {
         $this->form->category_id = $this->selectedCategory;
+        $this->form->update();
 
-        $this->validate([
-            'photo' => 'required|image|max:1024', // 1MB Max
-        ]);
 
-        // Encontra o item pelo ID
-        $asset = Asset::find($this->asset);
-
-        $filename =  Str::slug($this->assetname) . '.' . $this->photo->getClientOriginalName();
-
-        $path = $this->photo->storeAs('assets', $filename, 'public');
-
-        $this->form->update([
-            'profile_photo_path' => $path
-        ]);
-
-        session()->flash('message', 'Photo successfully uploaded.');
+        session()->flash('message', 'Asset successfully uploaded.');
 
         return $this->redirect('/assets');
     }

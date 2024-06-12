@@ -6,7 +6,7 @@
                 class="text-3xl font-medium text-orange-500  bg-gradient-to-r from-secondary-300 via-secondary-400 to-secondary-400 dark:text-white container mx-auto px-4 py-5">
                 Novo Ativo
 
-                
+
             </p>
 
             <div class="flex items-right justify-end py-2">
@@ -25,7 +25,8 @@
                         <div class="py-5">
                             <div>
                                 <label for="name"
-                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nº de Registro</label>
+                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nº de
+                                    Registro</label>
                                 <input type="text" id="record"
                                     class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                     wire:model="form.record" />
@@ -104,6 +105,25 @@
                                 @enderror
                             </div>
                         </div>
+
+
+                        <div class="py-5">
+                            <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="photo">Foto</label>
+                            <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" type="file" wire:model="form.photo" id="photo">
+
+                            @error('photo')
+                                {{ $message }}
+                            @enderror
+
+                            @if ($form->photo)
+                                Photo Preview:
+                                <img src="{{ $form->photo->temporaryUrl() }}" width="200">
+                            @endif
+                        </div>
+
+                        
+                       
+
 
 
 

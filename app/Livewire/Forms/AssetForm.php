@@ -5,9 +5,12 @@ namespace App\Livewire\Forms;
 use App\Models\Asset;
 use Livewire\Attributes\Validate;
 use Livewire\Form;
+use Illuminate\Support\Str;
+use Livewire\Features\SupportFileUploads\WithFileUploads;
 
 class AssetForm extends Form
 {
+    use WithFileUploads;
 
     public ?Asset $asset;
 
@@ -25,6 +28,9 @@ class AssetForm extends Form
 
     #[Validate('required|min:5')]
     public $price = '';
+
+    #[Validate('required|image|max:1024')] // 1MB Max
+    public $photo;
 
     public function setAsset(Asset $asset)
     {
@@ -44,6 +50,19 @@ class AssetForm extends Form
     public function update()
 
     {
+
+        if ($this->photo) {
+            
+
+            $filename =  Str::slug($this->asset->name) . '.' . $this->photo->getClientOriginalName();
+
+            $path = $this->photo->storeAs('assets', $filename, 'public');
+
+            $this->asset->profile_photo_path = $path;
+
+            
+        }
+
         $this->asset->update(
             $this->all()
         );
