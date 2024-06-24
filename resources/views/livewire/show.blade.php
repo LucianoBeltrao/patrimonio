@@ -106,7 +106,7 @@
                                     </div>
                                     <div
                                         class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
-                                        $67
+                                        --
                                     </div>
                                 </div>
                             </li>
@@ -122,7 +122,7 @@
                                     </div>
                                     <div
                                         class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
-                                        $367
+                                        {{ $description }}
                                     </div>
                                 </div>
                             </li>
@@ -186,17 +186,26 @@
                         class="rounded-full h-80 w-80">
                 @endif
 
+
             </div>
 
+            <br>
+
+            <div>
 
 
+
+            </div>
+
+            <br>
+
+
+            
 
 
         </div>
 
     </div>
-
-</div>
 
 </div>
 

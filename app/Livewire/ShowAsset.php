@@ -23,7 +23,7 @@ class ShowAsset extends Component
 
     public $record;
 
-    public $descricao;
+    public $description;
 
     public $valor;
 
@@ -43,6 +43,7 @@ class ShowAsset extends Component
 
         $this->assetname = $asset->name;
         $this->record = $asset->record;
+        $this->description = $asset->description;
         $this->valor = $asset->price;
         $this->photoasset = $asset->profile_photo_path;
 
