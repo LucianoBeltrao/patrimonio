@@ -22,6 +22,7 @@
 
         <div class="min-h-screen bg-gray-100">
             @livewire('navigation-menu')
+            <x-sidebar> </x-sidebar>
             <!-- Page Content -->
             <h1 class="px4"><x-banner /></h1>
             <main>
