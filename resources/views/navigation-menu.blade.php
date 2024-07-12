@@ -1,34 +1,11 @@
-<nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
+<nav x-data="{ open: false }" class="bg-gradient-to-r from-secondary-200 via-secondary-300 to-secondary-400 dark:text-white border-primary-200">
     <!-- Primary Navigation Menu -->
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class=" mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
             <div class="flex">
-                <!-- Logo -->
-                <div class="shrink-8 flex items-center">
-                    <a href="{{ route('dashboard') }}">
-                        <div>
-                            <img class="h-auto max-w-full rounded-lg" src="{{ asset('images/logo.jpg') }}" alt="Descrição da imagem">
-                        </div>
-                    </a>
-                </div>
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                        {{ __('Dahboard') }}
-                    </x-nav-link>
-                    <x-nav-link href="{{ route('users') }}" :active="request()->routeIs('users')">
-                        {{ __('Usuarios') }}
-                    </x-nav-link>
-                    <x-nav-link href="{{ route('projects') }}" :active="request()->routeIs('projects')">
-                        {{ __('Projetos') }}
-                    </x-nav-link>
-                    <x-nav-link href="{{ route('assets') }}" :active="request()->routeIs('assets')">
-                        {{ __('Ativos') }}
-                    </x-nav-link>
-                    <x-nav-link href="{{ route('designations') }}" :active="request()->routeIs('designations')">
-                        {{ __('Alocação de Ativos') }}
-                    </x-nav-link>
                 </div>
             </div>
 
@@ -110,7 +87,7 @@
 
                         <x-slot name="content">
                             <!-- Account Management -->
-                            <div class="block px-4 py-2 text-xs text-gray-400">
+                            <div class="block px4 py-2 text-xs text-gray-400">
                                 {{ __('Manage Account') }}
                             </div>
 
