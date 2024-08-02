@@ -47,6 +47,7 @@ class AssetForm extends Form
         $this->price = $asset->price;
     }
 
+    
     public function update()
 
     {

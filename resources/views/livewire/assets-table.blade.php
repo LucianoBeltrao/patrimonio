@@ -6,8 +6,8 @@
         </div>
     @endif
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+    <div class=" py-12">
+        <div class="items-right justify-end max-w-7xl mx-auto sm:px-4 lg:px-1">
             <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
 
 
@@ -32,12 +32,10 @@
                 <table class="w-full border-collapse table-sm">
                     <thead>
                         <tr class="bg-primary-500">
-                            <th class="p-4 cursor-pointer text-center" x-on:click="sortBy('name')">Foto</th>
+                            <th class="p-4 cursor-pointer text-center" x-on:click="sortBy('name')"> </th>
                             <th class="p-4 cursor-pointer text-center" x-on:click="sortBy('name')">Registro</th>
                             <th class="p-4 cursor-pointer text-center" x-on:click="sortBy('name')">Nome</th>
-                            <th class="p-4 cursor-pointer text-center" x-on:click="sortBy('description')">Descrição</th>
-                            <th class="p-4 cursor-pointer text-center" x-on:click="sortBy('description')">Categoria</th>
-                            <th class="p-4 cursor-pointer text-center" x-on:click="sortBy('price')">Valor</th>
+
                             <th class="p-4 cursor-pointer text-center" x-on:click="sortBy('price')">Alterar</th>
 
                         </tr>
@@ -46,20 +44,9 @@
                         <div>
                             @foreach ($assets as $asset)
                                 <tr class="border-b border-primary-500">
-                                    <td class="px-4 py-4 ">
-                                        @if ($asset->photo)
-                                            <img src="{{ url("storage/{$asset->photo}") }}" alt="{{ $asset->name }}"
-                                                class="rounded h-8 w-8">
-                                        @else
-                                            <img src="{{ url('images/without-image.png') }}" alt="{{ $asset->name }}"
-                                                class="rounded-full h-8 w-9">
-                                        @endif
-                                    </td>
+                                    <td class="px-4 py-4 "><x-record-icon></x-photo-icon></td>
                                     <td class="px-4 py-4 ">{{ $asset->record }}</td>
                                     <td class="px-4 py-4 ">{{ $asset->name }}</td>
-                                    <td class="px-4 py-4 ">{{ $asset->description }}</td>
-                                    <td class="px-4 py-4 ">{{ $asset->category->name }}</td>
-                                    <td class="px-4 py-4 ">{{ $asset->price }}</td>
                                     <td class="px-2 py-2 text-right flex items-right justify-end py-2">
                                         <a href="{{ route('show', $asset->id) }}"
                                             class="text-white p-4 cursor-pointer text-center me-1 mb-4"><svg
