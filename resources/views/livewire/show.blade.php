@@ -164,7 +164,7 @@
                                             Ativo
                                         </p>
                                         <p class="text-sm text-gray-500 truncate dark:text-gray-400">
-                                            <text class="text-orange-500">Número de Série:</text> 0001-0
+                                            <text class="text-orange-500">Número de Série:</text> {{ $serial_number }}
                                         </p>
                                     </div>
                                     <div
@@ -204,7 +204,7 @@
                                     </div>
                                     <div
                                         class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
-                                        --
+                                        {{ $brand }}
                                     </div>
                                 </div>
                             </li>
@@ -236,7 +236,13 @@
                                     </div>
                                     <div
                                         class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
-                                        Novo
+
+                                        @if ($health == 1)
+                                            Usado
+                                        @else
+                                            Novo
+                                        @endif
+
                                     </div>
                                 </div>
                             </li>
@@ -321,7 +327,7 @@
                                 </div>
                                 <div
                                     class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
-                                     450 h
+                                 {{ $uptime }} h
                                 </div>
                             </div>
 

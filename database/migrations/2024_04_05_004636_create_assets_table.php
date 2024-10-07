@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('name'); //nome do ativo
             $table->text('description'); //descrição básica
             $table->text('health'); //descrição básica
-            $table->text('uptime'); //descrição básica
+            $table->integer('uptime')->default(0); //descrição básica
             $table->string('invoice'); //numero da nota fiscal
             $table->string('serial_number'); //numero de série do item
             $table->decimal('price'); //19.99 

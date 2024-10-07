@@ -11,6 +11,7 @@ class ShowAsset extends Component
 {
 
     public $photo;
+
     public $assetId;
 
     public $assetname;
@@ -23,7 +24,17 @@ class ShowAsset extends Component
 
     public $record;
 
+    public $brand;
+
     public $description;
+
+    public $health;
+
+    public $uptime;
+
+    public $invoice;
+
+    public $serial_number;
 
     public $valor;
 
@@ -43,19 +54,22 @@ class ShowAsset extends Component
 
         $this->assetname = $asset->name;
         $this->record = $asset->record;
+        $this->brand = $asset->brand;
         $this->description = $asset->description;
+        $this->health = $asset->health;
+        $this->uptime = $asset->uptime;
+        $this->invoice = $asset->invoice;
+        $this->serial_number = $asset->serial_number;
         $this->valor = $asset->price;
         $this->photoasset = $asset->profile_photo_path;
 
         $this->categories = Category::all();
         $this->selectedCategory = $asset->category_id;
-        
+
         $categoryshow = Category::find($this->selectedCategory);
         $this->categoryname = $categoryshow->name;
-        
+
 
         return view('livewire.show');
     }
-
- 
 }
