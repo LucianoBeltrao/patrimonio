@@ -71,6 +71,101 @@
 
                         <div class="py-5">
                             <div>
+                                <label for="brand"
+                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Marca</label>
+                                <input type="text" id="brand"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                    wire:model="form.brand" />
+                            </div>
+                            <div>
+                                @error('form.brand')
+                                    <span class="error">{{ $message }}</span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="py-5">
+                            <div>
+                                <label for="model"
+                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Nome do
+                                    Ativo</label>
+                                <input type="text" id="model"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                    wire:model="form.model" />
+                            </div>
+                            <div>
+                                @error('form.model')
+                                    <span class="error">{{ $message }}</span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="py-5">
+                            <div>
+                                <label for="health"
+                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">saúde</label>
+                                <input type="text" id="health"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                    wire:model="form.health" />
+                            </div>
+                            <div>
+                                @error('form.health')
+                                    <span class="error">{{ $message }}</span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="py-5">
+                            <div>
+                                <label for="uptime"
+                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Tempo de
+                                    Uso</label>
+                                <input type="text" id="uptime"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                    wire:model="form.uptime" />
+                            </div>
+                            <div>
+                                @error('form.uptime')
+                                    <span class="error">{{ $message }}</span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="py-5">
+                            <div>
+                                <label for="invoice"
+                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Número da Nota
+                                    Fiscal</label>
+                                <input type="text" id="invoice"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                    wire:model="form.invoice" />
+                            </div>
+                            <div>
+                                @error('form.invoice')
+                                    <span class="error">{{ $message }}</span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="py-5">
+                            <div>
+                                <label for="serial_number"
+                                    class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Número de
+                                    Série</label>
+                                <input type="text" id="serial_number"
+                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                    wire:model="form.serial_number" />
+                            </div>
+                            <div>
+                                @error('form.serial_number')
+                                    <span class="error">{{ $message }}</span>
+                                @enderror
+                            </div>
+                        </div>
+
+
+                        <div class="py-5">
+                            <div>
                                 <label for="description"
                                     class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Descrição</label>
                                 <textarea id="description" rows="4"
@@ -103,8 +198,11 @@
 
 
                         <div class="py-5">
-                            <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white" for="photo">Foto</label>
-                            <input class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" type="file" wire:model="form.photo" id="photo">
+                            <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                                for="photo">Foto</label>
+                            <input
+                                class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400"
+                                type="file" wire:model="form.photo" id="photo">
 
                             @error('photo')
                                 {{ $message }}
@@ -115,14 +213,14 @@
                                 <img src="{{ $form->photo->temporaryUrl() }}" width="200">
                             @endif
                         </div>
-                        
+
                         <div class="py-2">
 
                             <button type="submit"
                                 class="text-white bg-gradient-to-r from-secondary-300 via-secondary-400 to-secondary-400  hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-primary-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Salvar</button>
 
                         </div>
-                        
+
 
                     </form>
 

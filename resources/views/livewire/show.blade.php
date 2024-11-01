@@ -66,7 +66,7 @@
                     </h3>
                     <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">3 de
                         Janeiro de 2024</time>
-                    <p class="mb-4 text-base font-normal text-orange-500 dark:text-gray-400">NF nº 15874</p>
+                    <p class="mb-4 text-base font-normal text-orange-500 dark:text-gray-400">NF nº {{ $invoice }}</p>
                     <a href="#"
                         class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-100 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"><svg
                             class="w-3.5 h-3.5 me-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
@@ -133,9 +133,10 @@
                         </h5>
                         <a href="{{ route('assets') }}"
                             class="text-sm font-medium text-blue-600 hover:underline dark:text-blue-500">
-                            Ver todos
+                            Todos Ativos
                         </a>
                     </div>
+                    {{ $description }}
                     <div class="flow-root">
                         <ul role="list" class="divide-y divide-gray-200 dark:divide-gray-700">
                             <li class="py-3 sm:py-4">
@@ -164,7 +165,7 @@
                                             Ativo
                                         </p>
                                         <p class="text-sm text-gray-500 truncate dark:text-gray-400">
-                                            <text class="text-orange-500">Número de Série:</text> 0001-0
+                                            <text class="text-orange-500">Número de Série:</text> {{ $serial_number }}
                                         </p>
                                     </div>
                                     <div
@@ -204,7 +205,7 @@
                                     </div>
                                     <div
                                         class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
-                                        --
+                                        {{ $brand }}
                                     </div>
                                 </div>
                             </li>
@@ -220,7 +221,7 @@
                                     </div>
                                     <div
                                         class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
-                                        {{ $description }}
+                                        {{ $model }}
                                     </div>
                                 </div>
                             </li>
@@ -236,7 +237,7 @@
                                     </div>
                                     <div
                                         class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
-                                        Novo
+                                        {{ $health }}
                                     </div>
                                 </div>
                             </li>
@@ -320,8 +321,8 @@
                                     </p>
                                 </div>
                                 <div
-                                    class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
-                                     450 h
+                                    class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white ms-2">
+                                    {{ $uptime }} h
                                 </div>
                             </div>
 

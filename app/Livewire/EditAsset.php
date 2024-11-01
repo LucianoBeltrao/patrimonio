@@ -27,6 +27,10 @@ class EditAsset extends Component
 
     public $asset;
 
+    public $brand;
+
+    public $model;
+
     public function mount(Asset $asset)
     {
 
@@ -34,7 +38,9 @@ class EditAsset extends Component
         $this->categories = Category::all();
         $this->selectedCategory = $this->form->category_id;
         $this->assetname = $this->form->name;
-        
+        $this->brand = $this->form->brand;
+        $this->model = $this->form->model;
+
     }
 
 
@@ -55,5 +61,5 @@ class EditAsset extends Component
         return view('livewire.edit-asset');
     }
 
-    
+
 }

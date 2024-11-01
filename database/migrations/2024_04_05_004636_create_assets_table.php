@@ -17,12 +17,13 @@ return new class extends Migration
             $table->string('record'); //numero do tombamento
             $table->string('brand'); //marca do ativo
             $table->string('name'); //nome do ativo
+            $table->string('model'); //nome do ativo
             $table->text('description'); //descrição básica
-            $table->text('health'); //descrição básica
-            $table->text('uptime'); //descrição básica
+            $table->text('health'); //saude do ativo
+            $table->text('uptime'); //tempo de uso
             $table->string('invoice'); //numero da nota fiscal
-            $table->string('serial_number'); //numero de série do item
-            $table->decimal('price'); //19.99 
+            $table->string('serial_number'); //numero de série do item */
+            $table->decimal('price'); //19.99
             $table->text('profile_photo_path')->nullable();
             $table->timestamps();
         });
