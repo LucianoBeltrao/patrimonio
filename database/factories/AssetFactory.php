@@ -21,7 +21,19 @@ class AssetFactory extends Factory
                 'category_id' => Category::inRandomOrder()->first()->id,
 
 				'record' => $this->faker->numberBetween(int1: 1_00, int2: 100_00),
-				
+
+                'brand' => $this->faker->randomElement(['Arno', 'Reino', 'NewT']),
+
+                'model' => $this->faker->randomElement(['Zeta2', 'Alfa4', 'Jupter1']),
+
+                'health' => $this->faker->randomElement(['Novo', 'Usado']),
+
+                'uptime' => $this->faker->numberBetween(int1: 50_00, int2: 45000_00),
+
+                'invoice' => $this->faker->numberBetween(int1: 50_00, int2: 45000_00),
+
+                'serial_number' => $this->faker->numberBetween(int1: 50_00, int2: 45000_00),
+
 				'name' => $this->faker->unique()->randomElement(['Geladeira',
 				'Lixeira',
 				'Pallet',

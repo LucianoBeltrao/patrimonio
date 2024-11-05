@@ -1,4 +1,5 @@
 <div class="py-12">
+<<<<<<< HEAD
     <div class="flex items-right justify-end mx-auto sm:px-6 lg:px-8">
 
 
@@ -66,6 +67,105 @@
             </li>
         </ol>
     </div>
+=======
+    <div class="flex space-x-10 justify-end mx-auto sm:px-9 lg:px-8;">
+
+
+        <div class="flex items-right justify-end py-2">
+            <ol class="relative border-s border-gray-200 dark:border-gray-700">
+
+                <li class="mb-10 ms-6">
+                    <span
+                        class="absolute flex items-center justify-center w-6 h-6 bg-orange-200 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-orange-900">
+                        <svg class="w-2.5 h-2.5 text-orange-500 dark:text-orange-300" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
+                        </svg>
+                    </span>
+                    <h3 class="mb-1 text-lg font-semibold text-gray-900 dark:text-white">Recebimento de Transferência
+                    </h3>
+                    <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">22 de
+                        Março de 2024</time>
+                    <p class="text-base font-normal text-orange-500 dark:text-gray-400">Camila - D. Operacional</p>
+                </li>
+
+                <li class="mb-10 ms-6">
+                    <span
+                        class="absolute flex items-center justify-center w-6 h-6 bg-orange-200 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-orange-900">
+                        <svg class="w-2.5 h-2.5 text-orange-500 dark:text-orange-300" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
+                        </svg>
+                    </span>
+                    <h3 class="mb-1 text-lg font-semibold text-gray-900 dark:text-white">Transferência de Unidade</h3>
+                    <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">20 de
+                        Março de 2024</time>
+                    <p class="text-base font-normal text-orange-500 dark:text-gray-400">Eduardo - D. Frota</p>
+                </li>
+
+                <li class="mb-10 ms-6">
+                    <span
+                        class="absolute flex items-center justify-center w-6 h-6 bg-orange-200 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-orange-900">
+                        <svg class="w-2.5 h-2.5 text-orange-500 dark:text-orange-300" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
+                        </svg>
+                    </span>
+                    <h3 class="mb-1 text-lg font-semibold text-gray-900 dark:text-white">Data da Entrega</h3>
+                    <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">2 de
+                        Fevereiro de 2024</time>
+                    <p class="text-base font-normal text-orange-500 dark:text-gray-400">Joice D. Compras</p>
+                </li>
+                <li class="mb-10 ms-6">
+                    <span
+                        class="absolute flex items-center justify-center w-6 h-6 bg-orange-200 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-orange-900">
+                        <svg class="w-2.5 h-2.5 text-orange-500 dark:text-orange-300" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
+                        </svg>
+                    </span>
+                    <h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white">Emissão da
+                        Nota Fiscal <span
+                            class="bg-green-100 text-green-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-green-900 dark:text-green-300 ms-3">No
+                            prazo</span>
+                    </h3>
+                    <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">3 de
+                        Janeiro de 2024</time>
+                    <p class="mb-4 text-base font-normal text-orange-500 dark:text-gray-400">NF nº {{ $invoice }}</p>
+                    <a href="#"
+                        class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-100 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700"><svg
+                            class="w-3.5 h-3.5 me-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                            fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M14.707 7.793a1 1 0 0 0-1.414 0L11 10.086V1.5a1 1 0 0 0-2 0v8.586L6.707 7.793a1 1 0 1 0-1.414 1.414l4 4a1 1 0 0 0 1.416 0l4-4a1 1 0 0 0-.002-1.414Z" />
+                            <path
+                                d="M18 12h-2.55l-2.975 2.975a3.5 3.5 0 0 1-4.95 0L4.55 12H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4a2 2 0 0 0-2-2Zm-3 5a1 1 0 1 1 0-2 1 1 0 0 1 0 2Z" />
+                        </svg> Baixar DANFE</a>
+                </li>
+                <li class="ms-6">
+                    <span
+                        class="absolute flex items-center justify-center w-6 h-6 bg-orange-200 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-orange-900">
+                        <svg class="w-2.5 h-2.5 text-orange-500 dark:text-orange-300" aria-hidden="true"
+                            xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
+                        </svg>
+                    </span>
+                    <h3 class="mb-1 text-lg font-semibold text-gray-900 dark:text-white">Data da Compra
+                    </h3>
+                    <time class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">1 de
+                        Janeiro de 2024</time>
+                    <p class="text-base font-normal text-orange-500 dark:text-gray-400">Luciano - D. Financeiro</p>
+                </li>
+            </ol>
+        </div>
+
+
+>>>>>>> 1-testando-sidebar-do-aceternity-ui
 
         <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
 
@@ -93,8 +193,12 @@
 
 
 
+<<<<<<< HEAD
 
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8 flex items-start gap-8">
+=======
+            <div class="max-w-9xl mx-auto sm:px6 lg:px-9 flex items-start gap-8">
+>>>>>>> 1-testando-sidebar-do-aceternity-ui
 
                 <div
                     class="w-full max-w-xl p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
@@ -104,9 +208,10 @@
                         </h5>
                         <a href="{{ route('assets') }}"
                             class="text-sm font-medium text-blue-600 hover:underline dark:text-blue-500">
-                            Ver todos
+                            Todos Ativos
                         </a>
                     </div>
+                    {{ $description }}
                     <div class="flow-root">
                         <ul role="list" class="divide-y divide-gray-200 dark:divide-gray-700">
                             <li class="py-3 sm:py-4">
@@ -135,7 +240,7 @@
                                             Ativo
                                         </p>
                                         <p class="text-sm text-gray-500 truncate dark:text-gray-400">
-                                            <text class="text-orange-500">Número de Série:</text> 0001-0
+                                            <text class="text-orange-500">Número de Série:</text> {{ $serial_number }}
                                         </p>
                                     </div>
                                     <div
@@ -175,7 +280,7 @@
                                     </div>
                                     <div
                                         class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
-                                        --
+                                        {{ $brand }}
                                     </div>
                                 </div>
                             </li>
@@ -191,7 +296,7 @@
                                     </div>
                                     <div
                                         class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
-                                        {{ $description }}
+                                        {{ $model }}
                                     </div>
                                 </div>
                             </li>
@@ -207,10 +312,11 @@
                                     </div>
                                     <div
                                         class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
-                                        Novo
+                                        {{ $health }}
                                     </div>
                                 </div>
                             </li>
+
                             <li class="py-3 sm:py-4">
                                 <div class="flex items-center ">
                                     <div class="flex-shrink-0">
@@ -239,7 +345,7 @@
                                     </div>
                                     <div
                                         class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
-                                        BR-040 135 km 783 - Matriz
+                                        BR-040 135 km 783 - Matriz (Geo)
                                     </div>
                                 </div>
                             </li>
@@ -247,17 +353,68 @@
                     </div>
                 </div>
 
-                @if ($photoasset)
-                    <img class="h-auto max-w-md ms-auto rounded-lg" src="{{ url("storage/{$photoasset}") }}"
-                        alt="{{ $assetname }}">
-                @else
-                    <img src="{{ url('images/without-image.png') }}" alt="{{ $assetname }}"
-                        class="rounded-full h-80 w-80">
-                @endif
+                <div class="flex flex-col ">
+                    <div
+                        class="w-full max-w-xl p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
+                        <div class="flex items-center justify-between mb-4">
+                            <h5 class="text-xl font-bold leading-none text-orange-500 dark:text-white">
+                                <x-photo-icon></x-photo-icon>
+                            </h5>
 
+                        </div>
+                        <div class="flow-root">
+                            <ul role="list" class="divide-y divide-gray-200 dark:divide-gray-700">
+
+
+                                @if ($photoasset)
+                                    <img class="max-w-md max-h-80 ms-auto rounded-lg overflow-hidden"
+                                        src="{{ url("storage/{$photoasset}") }}" alt="{{ $assetname }}">
+                                @else
+                                    <img src="{{ url('images/without-image.png') }}" alt="{{ $assetname }}"
+                                        class="rounded-full h-50 w-50">
+                                @endif
+                            </ul>
+                        </div>
+
+                    </div>
+
+
+                    <br>
+
+                    <div
+                        class="w-full max-w-xl p-4 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
+                        <div class="flex items-center justify-between mb-4">
+
+
+                            <div class="flex items-center ">
+
+                                <x-bigclock-icon></x-bigclock-icon>
+
+                                <div class="flex-1 min-w-0 ms-4">
+                                    <p class="text-sm font-medium text-orange-500 truncate dark:text-white">
+                                        Tempo de Uso:
+                                    </p>
+                                </div>
+                                <div
+                                    class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white ms-2">
+                                    {{ $uptime }} h
+                                </div>
+                            </div>
+
+
+
+
+                        </div>
+                    </div>
+
+
+
+
+                </div>
 
             </div>
 
+<<<<<<< HEAD
             <br>
 
             <div>
@@ -272,11 +429,9 @@
 
 
 
+=======
+>>>>>>> 1-testando-sidebar-do-aceternity-ui
         </div>
 
+
     </div>
-
-</div>
-
-
-</div>

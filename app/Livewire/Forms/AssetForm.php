@@ -20,6 +20,24 @@ class AssetForm extends Form
     #[Validate('min:1')]
     public $category_id = '';
 
+    #[Validate('required|min:1')]
+    public $brand = '';
+
+    #[Validate('required|min:1')]
+    public $model = '';
+
+    #[Validate('required|min:1')]
+    public $health = '';
+
+    #[Validate('required|min:1')]
+    public $uptime = '';
+
+    #[Validate('required|min:1')]
+    public $invoice = '';
+
+    #[Validate('required|min:1')]
+    public $serial_number = '';
+
     #[Validate('required|min:5')]
     public $name = '';
 
@@ -40,19 +58,33 @@ class AssetForm extends Form
 
         $this->category_id = $asset->category_id;
 
+        $this->brand =  $asset->brand;
+
+        $this->model =  $asset->model;
+
         $this->name = $asset->name;
 
         $this->description = $asset->description;
 
         $this->price = $asset->price;
+
+        $this->health = $asset->health;
+
+        $this->uptime = $asset->uptime;
+
+        $this->invoice = $asset->invoice;
+
+        $this->serial_number = $asset->serial_number;
+
     }
+
 
     public function update()
 
     {
 
         if ($this->photo) {
-            
+
 
             $filename =  Str::slug($this->asset->name) . '.' . $this->photo->getClientOriginalName();
 
@@ -60,7 +92,7 @@ class AssetForm extends Form
 
             $this->asset->profile_photo_path = $path;
 
-            
+
         }
 
         $this->asset->update(
