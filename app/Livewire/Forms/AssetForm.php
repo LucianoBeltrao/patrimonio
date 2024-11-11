@@ -58,11 +58,11 @@ class AssetForm extends Form
 
         $this->category_id = $asset->category_id;
 
+        $this->name = $asset->name;
+
         $this->brand =  $asset->brand;
 
         $this->model =  $asset->model;
-
-        $this->name = $asset->name;
 
         $this->description = $asset->description;
 

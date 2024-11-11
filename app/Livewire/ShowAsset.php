@@ -10,7 +10,6 @@ use Livewire\Component;
 class ShowAsset extends Component
 {
 
-    public $photo;
     public $assetId;
     public $assetname;
     public $categories;
@@ -19,13 +18,13 @@ class ShowAsset extends Component
     public $record;
     public $description;
     public $valor;
-    public $photoasset;
     public $brand;
     public $model;
     public $health;
     public $uptime;
     public $invoice;
     public $serial_number;
+    public $photoasset;
 
 
 
