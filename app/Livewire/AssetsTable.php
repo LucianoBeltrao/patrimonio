@@ -21,7 +21,7 @@ class AssetsTable extends Component
 
     public $search='';
 
-    
+
     public function mount()
     {
         $this->assets = Asset::with('category')->paginate(10);// Buscar todos os ativos do banco de dados
@@ -43,8 +43,8 @@ class AssetsTable extends Component
     public function delete(Asset $asset)
     {
             $asset->delete();
-            
-          
+
+
             session()->flash('message', 'Ativo excluído com sucesso.');
             return $this->redirect('/assets', navigate:true);
      }
@@ -68,15 +68,15 @@ class CreateAsset extends Component
     public function mount()
     {
         $this->categories = Category::all();
-        
+
     }
 
 
     public function save()
     {
-        
+
         $this->validate();
- 
+
         $assetData = $this->form->all();
 
         if ($this->form->photo) {
@@ -85,8 +85,10 @@ class CreateAsset extends Component
             $assetData['profile_photo_path'] = $path;
         }
 
+        $assetData['user_id'] = auth()->id();
+
         Asset::create($assetData);
-        
+
         return $this->redirect('/assets');
     }
 
@@ -95,6 +97,6 @@ class CreateAsset extends Component
         return view('livewire.asset-form');
     }
 
-    
+
 
 }

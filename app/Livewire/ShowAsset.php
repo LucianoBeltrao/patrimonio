@@ -4,6 +4,10 @@ namespace App\Livewire;
 
 use App\Models\Asset;
 use App\Models\Category;
+use App\Models\Department;
+use App\Models\Project;
+use App\Models\Traceability;
+use App\Models\User;
 use Livewire\Component;
 
 
@@ -25,12 +29,21 @@ class ShowAsset extends Component
     public $invoice;
     public $serial_number;
     public $photoasset;
+    public $traceabilities;
+    public $user;
+    public $project;
+    public $department;
+
 
 
 
     public function mount($assetId)
     {
         $this->$assetId = $assetId;
+        $this->traceabilities = Traceability::where('asset_id', $assetId)->orderBy('created_at', 'desc')->get();
+        $this->user = User::where('id', $assetId)->get();
+        $this->project = Project::where('id', $assetId)->get();
+        $this->department = Department::where('id', $assetId)->get();
     }
 
 
@@ -50,7 +63,6 @@ class ShowAsset extends Component
         $this->valor = $asset->price;
         $this->photoasset = $asset->profile_photo_path;
 
-
         $this->categories = Category::all();
         $this->selectedCategory = $asset->category_id;
 
@@ -59,6 +71,7 @@ class ShowAsset extends Component
 
 
         return view('livewire.show');
+
     }
 
 

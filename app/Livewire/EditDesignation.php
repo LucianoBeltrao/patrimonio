@@ -9,6 +9,7 @@ use App\Models\Designation;
 use App\Models\Project;
 use App\Models\User;
 use Livewire\Component;
+use App\Models\Traceability;
 
 class EditDesignation extends Component
 {
@@ -37,7 +38,7 @@ class EditDesignation extends Component
         $this->projects = Project::all();
         $this->selectedProject = $this->form->project_id;
 
-        $this->departments = Department::all();
+        $this->departments = Department::where('project_id', $this->selectedProject)->get();
         $this->selectedDepartment = $this->form->department_id;
 
         $this->assets = Asset::all();
@@ -48,6 +49,7 @@ class EditDesignation extends Component
 
         $this->numberdesignation = $this->form->designation->id;
     }
+
 
 
     public function update()
@@ -65,7 +67,6 @@ class EditDesignation extends Component
 
         return $this->redirect('/designations');
     }
-
 
 
     public function render()

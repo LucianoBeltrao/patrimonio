@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use App\Models\Category;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -18,6 +19,9 @@ class AssetFactory extends Factory
     public function definition(): array
     {
         return [
+
+                'user_id' => User::inRandomOrder()->first()->id,
+
                 'category_id' => Category::inRandomOrder()->first()->id,
 
 				'record' => $this->faker->numberBetween(int1: 1_00, int2: 100_00),

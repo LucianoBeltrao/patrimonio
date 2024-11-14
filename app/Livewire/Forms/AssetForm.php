@@ -3,6 +3,7 @@
 namespace App\Livewire\Forms;
 
 use App\Models\Asset;
+use App\Models\User;
 use Livewire\Attributes\Validate;
 use Livewire\Form;
 use Illuminate\Support\Str;
@@ -57,6 +58,7 @@ class AssetForm extends Form
         $this->record = $asset->record;
 
         $this->category_id = $asset->category_id;
+
 
         $this->name = $asset->name;
 

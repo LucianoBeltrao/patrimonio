@@ -20,4 +20,9 @@ class Department extends Model
     {
         return $this->hasOne(Designation::class);
     }
+
+    public function traceability(): HasOne
+    {
+        return $this->hasOne(Traceability::class);
+    }
 }

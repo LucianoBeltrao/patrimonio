@@ -20,5 +20,9 @@ class Project extends Model
     {
         return $this->hasOne(Designation::class);
     }
-    
+
+    public function traceability(): HasMany
+    {
+        return $this->hasMany(Traceability::class);
+    }
 }

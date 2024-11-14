@@ -13,8 +13,9 @@ return new class extends Migration
     {
         Schema::create('assets', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->constrained();
             $table->foreignId('category_id')->constrained();
-            $table->string('record'); //numero do tombamento
+            $table->string('record')->unique(); //numero do tombamento
             $table->string('brand'); //marca do ativo
             $table->string('name'); //nome do ativo
             $table->string('model'); //nome do ativo

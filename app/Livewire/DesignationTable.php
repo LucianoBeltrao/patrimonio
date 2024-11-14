@@ -76,17 +76,22 @@ class CreateDesignation extends Component
 
         $this->departments = Department::all();
 
-        $this->assets = Asset::all();
-
         $this->users = User::all();
+
+        $this->getAvailableAssets();
     }
 
 
-    public function updatedselectedProject($project)
+    public function updatedSelectedProject($project)
     {
         $this->departments = Department::where('project_id', $project)->get();
     }
-    
+
+    public function getAvailableAssets()
+    {
+        $this->assets = Asset::whereDoesntHave('designation')->get();
+    }
+
 
     public function save()
     {
@@ -98,6 +103,8 @@ class CreateDesignation extends Component
             $this->form->all()
         );
 
+
+        $this->getAvailableAssets();
 
         return $this->redirect('/designations');
     }
