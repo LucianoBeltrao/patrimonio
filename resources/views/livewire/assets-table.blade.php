@@ -1,23 +1,23 @@
 <div>
     @if (session()->has('success'))
-        <div class="bg-red-100 text-red-700 px-4 py-3" role="alert">
+        <div class="px-4 py-3 text-red-700 bg-red-100" role="alert">
             <p class="font-bold">Sucesso</p>
             <p class="text-sm">{{ session('success') }}</p>
         </div>
     @endif
 
-    <div class=" py-12">
-        <div class="items-right justify-end max-w-7xl mx-auto sm:px-4 lg:px-1">
-            <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
+    <div class="py-16">
+        <div class="justify-end mx-auto items-right max-w-6xl sm:px-4 lg:px-1">
+            <div class="overflow-hidden bg-white shadow-xl sm:rounded-lg">
 
 
                 <p
-                    class="text-3xl font-medium text-orange-500  bg-gradient-to-r from-secondary-300 via-secondary-400 to-secondary-400 dark:text-white container mx-auto px-4 py-5">
+                    class="container px-4 py-5 mx-auto text-3xl font-medium text-orange-500 bg-gradient-to-r from-secondary-300 via-secondary-400 to-secondary-400 dark:text-white">
                     Ativos Registrados
                 </p>
 
 
-                <div class="flex items-right justify-end py-2">
+                <div class="flex justify-end py-2 items-right">
 
                     <input wire:model.live.debounce.150ms="search" type="text"
                         class="flex items-left justify-start py-2 block font-medium  text-sm px-28 py-2.5 text-center me-2 mb-2 text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
@@ -32,11 +32,11 @@
                 <table class="w-full border-collapse table-sm">
                     <thead>
                         <tr class="bg-primary-500">
-                            <th class="p-4 cursor-pointer text-center" x-on:click="sortBy('name')"> </th>
-                            <th class="p-4 cursor-pointer text-center" x-on:click="sortBy('name')">Registro</th>
-                            <th class="p-4 cursor-pointer text-center" x-on:click="sortBy('name')">Nome</th>
+                            <th class="p-4 text-center cursor-pointer" x-on:click="sortBy('name')"> </th>
+                            <th class="p-4 text-center cursor-pointer" x-on:click="sortBy('name')">Registro</th>
+                            <th class="p-4 text-center cursor-pointer" x-on:click="sortBy('name')">Nome</th>
 
-                            <th class="p-4 cursor-pointer text-center" x-on:click="sortBy('price')">Alterar</th>
+                            <th class="p-4 text-center cursor-pointer" x-on:click="sortBy('price')">Alterar</th>
 
                         </tr>
                     </thead>
@@ -47,9 +47,9 @@
                                     <td class="px-4 py-4 "><x-record-icon></x-photo-icon></td>
                                     <td class="px-4 py-4 ">{{ $asset->record }}</td>
                                     <td class="px-4 py-4 ">{{ $asset->name }}</td>
-                                    <td class="px-2 py-2 text-right flex items-right justify-end py-2">
+                                    <td class="flex justify-end px-2 py-2 text-right items-right">
                                         <a href="{{ route('show', $asset->id) }}"
-                                            class="text-white p-4 cursor-pointer text-center me-1 mb-4"><svg
+                                            class="p-4 mb-4 text-center text-white cursor-pointer me-1"><svg
                                                 class="w-5 h-5 text-gray-800 dark:text-white" aria-hidden="true"
                                                 xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 16 16">
                                                 <path stroke="currentColor" stroke-linecap="round"
@@ -58,7 +58,7 @@
                                                 </path>
                                             </svg></a>
                                         <a href="{{ route('editasset', $asset->id) }}"
-                                            class="text-white p-4 cursor-pointer text-center me-1 mb-2"> <svg
+                                            class="p-4 mb-2 text-center text-white cursor-pointer me-1"> <svg
                                                 class="w-5 h-5 text-gray-800 dark:text-white" aria-hidden="true"
                                                 xmlns="http://www.w3.org/2000/svg" fill="currentColor"
                                                 viewBox="0 0 20 20">
@@ -70,7 +70,7 @@
                                                 </path>
                                             </svg></a>
                                         <button wire:click="delete({{ $asset->id }})"
-                                            class="text-white p-4 cursor-pointer text-center me-1 mb-3"><svg
+                                            class="p-4 mb-3 text-center text-white cursor-pointer me-1"><svg
                                                 class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
                                                 xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                                                 fill="none" viewBox="0 0 24 24">
